@@ -1,5 +1,6 @@
+// 分解物品
 export default (sequelize, DataTypes) => {
-    const Order = sequelize.define('Order', {
+    const ExchangeGoods = sequelize.define('ExchangeGoods', {
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
@@ -7,58 +8,54 @@ export default (sequelize, DataTypes) => {
         },
         uid: {
             type: DataTypes.INTEGER,
-            notEmpty: true,
+            validate: {
+                notEmpty: true,
+            },
+            comment: "用户ID",
         },
-        pay_type: {
+        game_id: {
             type: DataTypes.INTEGER,
-            notEmpty: true,
-            comment: "支付类型 [1-支付宝，2-微信]",
+            validate: {
+                notEmpty: true,
+            },
+            comment: "游戏ID",
         },
-        sdcustomno: {
+        game_zone_info: {
             type: DataTypes.STRING,
             validate: {
                 notEmpty: true,
-                len: [1, 50]
             },
-            comment: "订单号",
+            comment: "游戏分区信息",
         },
-        money: {
+        goods_id: {
             type: DataTypes.INTEGER,
             validate: {
                 notEmpty: true,
-                defaultValue: 0
             },
-            comment: "充值人民币金额号",
+            comment: "物品ID",
         },
-        dollar_money: {
+        goods_num: {
             type: DataTypes.INTEGER,
             validate: {
                 notEmpty: true,
-                defaultValue: 0
             },
-            comment: "转换美元金额",
+            comment: "物品数量",
         },
         state: {
             type: DataTypes.INTEGER,
             validate: {
                 notEmpty: true,
-                defaultValue: 0
             },
-            comment: "充值状态",
-        },
-        // createTime: {
-        //     type: DataTypes.DATE,
-        //     validate: {
-        //         defaultValue: DataTypes.NOW
-        //     }
-        // }
+            comment: "审核状态 [0 - 末审核, 1 - 审核成功, 2 - 审核失败]"
+        }
+
     }, {
         underscored: true,
-        tableName: 'orders',
+        tableName: 'exchange_goods_records',
         charset: 'utf8mb4',
-        indexes: [{ unique: true, fields: ['sdcustomno'] }],
+        indexes: [{ unique: true, fields: ['id'] }],
         classMethods: {},
         instanceMethods: {}
     })
-    return Order
+    return ExchangeGoods
 }

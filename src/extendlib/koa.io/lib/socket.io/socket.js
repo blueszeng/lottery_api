@@ -21,10 +21,8 @@ var _ = require('lodash');
  */
 
 var res = {
-  setHeader: function resSetHeader() {
-  },
-  getHeader: function resGetHeader() {
-  },
+    setHeader: function resSetHeader() {},
+    getHeader: function resGetHeader() {},
 };
 
 /**
@@ -35,9 +33,10 @@ var res = {
  */
 
 function Socket(nsp, client) {
-  if (!(this instanceof Socket)) return new Socket(nsp, client);
-  this.socket = new OriginalSocket(nsp, client);
-  this.cookies = new Cookies(this.socket.request, res, nsp.server.keys);
+    if (!(this instanceof Socket)) return new Socket(nsp, client);
+    console.log("sdddssdsdsdsdsd")
+    this.socket = new OriginalSocket(nsp, client);
+    this.cookies = new Cookies(this.socket.request, res, nsp.server.keys);
 }
 
 /**
@@ -47,28 +46,28 @@ function Socket(nsp, client) {
 var socket = Socket.prototype;
 
 delegate(socket, 'socket')
-  .getter('client')
-  .getter('server')
-  .getter('adapter')
-  .getter('id')
-  .getter('request')
-  .getter('conn')
-  .getter('rooms')
-  .getter('acks')
-  .getter('json')
-  .getter('volatile')
-  .getter('broadcast')
-  .getter('connected')
-  .getter('disconnected')
-  .getter('handshake')
-  .method('join')
-  .method('leave')
-  // .method('emit')
-  .method('to')
-  .method('in')
-  .method('send')
-  .method('write')
-  .method('disconnect');
+    .getter('client')
+    .getter('server')
+    .getter('adapter')
+    .getter('id')
+    .getter('request')
+    .getter('conn')
+    .getter('rooms')
+    .getter('acks')
+    .getter('json')
+    .getter('volatile')
+    .getter('broadcast')
+    .getter('connected')
+    .getter('disconnected')
+    .getter('handshake')
+    .method('join')
+    .method('leave')
+    // .method('emit')
+    .method('to')
+    .method('in')
+    .method('send')
+    .method('write')
+    .method('disconnect');
 
 
 /**
@@ -79,7 +78,7 @@ delegate(socket, 'socket')
  */
 
 Socket.prototype.__defineGetter__('header', function headerGetter() {
-  return this.request.headers;
+    return this.request.headers;
 });
 
 /**
@@ -90,7 +89,7 @@ Socket.prototype.__defineGetter__('header', function headerGetter() {
  */
 
 Socket.prototype.__defineGetter__('headers', function headersGetter() {
-  return this.request.headers;
+    return this.request.headers;
 });
 
 
@@ -104,7 +103,7 @@ Socket.prototype.__defineGetter__('headers', function headersGetter() {
  */
 
 Socket.prototype.__defineGetter__('url', function urlGetter() {
-  return this.request.url;
+    return this.request.url;
 });
 
 /**
@@ -115,7 +114,7 @@ Socket.prototype.__defineGetter__('url', function urlGetter() {
  */
 
 Socket.prototype.__defineGetter__('path', function pathGetter() {
-  return parse(this.request).pathname;
+    return parse(this.request).pathname;
 });
 
 /**
@@ -126,11 +125,12 @@ Socket.prototype.__defineGetter__('path', function pathGetter() {
  */
 
 Socket.prototype.__defineGetter__('query', function queryGetter() {
-  var str = this.querystring;
-  /*istanbul ignore if*/ if (!str) return {};
+    var str = this.querystring;
+    /*istanbul ignore if*/
+    if (!str) return {};
 
-  var c = this._querycache = this._querycache || {};
-  return c[str] || (c[str] = qs.parse(str));
+    var c = this._querycache = this._querycache || {};
+    return c[str] || (c[str] = qs.parse(str));
 });
 
 
@@ -142,7 +142,7 @@ Socket.prototype.__defineGetter__('query', function queryGetter() {
  */
 
 Socket.prototype.__defineGetter__('querystring', function querystringGetter() {
-  return parse(this.request).query || /*istanbul ignore next*/ '';
+    return parse(this.request).query || /*istanbul ignore next*/ '';
 });
 
 /**
@@ -154,8 +154,9 @@ Socket.prototype.__defineGetter__('querystring', function querystringGetter() {
  */
 
 Socket.prototype.__defineGetter__('search', function searchGetter() {
-  /*istanbul ignore if*/ if (!this.querystring) return '';
-  return '?' + this.querystring;
+    /*istanbul ignore if*/
+    if (!this.querystring) return '';
+    return '?' + this.querystring;
 });
 
 /**
@@ -168,11 +169,12 @@ Socket.prototype.__defineGetter__('search', function searchGetter() {
  */
 
 Socket.prototype.__defineGetter__('host', function hostGetter() {
-  var proxy = this.server.proxy;
-  var host = proxy && this.get('X-Forwarded-Host');
-  host = host || this.get('Host');
-  /*istanbul ignore if*/ if (!host) return null;
-  return host.split(/\s*,\s*/)[0];
+    var proxy = this.server.proxy;
+    var host = proxy && this.get('X-Forwarded-Host');
+    host = host || this.get('Host');
+    /*istanbul ignore if*/
+    if (!host) return null;
+    return host.split(/\s*,\s*/)[0];
 });
 
 /**
@@ -185,9 +187,10 @@ Socket.prototype.__defineGetter__('host', function hostGetter() {
  */
 
 Socket.prototype.__defineGetter__('hostname', function hostnameGetter() {
-  var host = this.host;
-  /*istanbul ignore if*/ if (!host) return null;
-  return host.split(':')[0];
+    var host = this.host;
+    /*istanbul ignore if*/
+    if (!host) return null;
+    return host.split(':')[0];
 });
 
 /**
@@ -198,10 +201,11 @@ Socket.prototype.__defineGetter__('hostname', function hostnameGetter() {
  */
 
 Socket.prototype.__defineGetter__('charset', function charsetGetter() {
-  var type = this.get('Content-Type');
-  /*istanbul ignore next*/ if (!type) return null;
+    var type = this.get('Content-Type');
+    /*istanbul ignore next*/
+    if (!type) return null;
 
-  return typer.parse(type).parameters.charset;
+    return typer.parse(type).parameters.charset;
 });
 
 /**
@@ -212,9 +216,10 @@ Socket.prototype.__defineGetter__('charset', function charsetGetter() {
  */
 
 Socket.prototype.__defineGetter__('length', function lengthGetter() {
-  var len = this.get('Content-Length');
-  /*istanbul ignore if*/ if (len === null) return null;
-  return ~~len;
+    var len = this.get('Content-Length');
+    /*istanbul ignore if*/
+    if (len === null) return null;
+    return ~~len;
 });
 
 /**
@@ -230,11 +235,11 @@ Socket.prototype.__defineGetter__('length', function lengthGetter() {
  */
 
 Socket.prototype.__defineGetter__('protocol', function protocolGetter() {
-  var proxy = this.server.proxy;
-  if (this.request.connection.encrypted) return 'https';
-  if (!proxy) return 'http';
-  var proto = this.get('X-Forwarded-Proto') || 'http';
-  return proto.split(/\s*,\s*/)[0];
+    var proxy = this.server.proxy;
+    if (this.request.connection.encrypted) return 'https';
+    if (!proxy) return 'http';
+    var proto = this.get('X-Forwarded-Proto') || 'http';
+    return proto.split(/\s*,\s*/)[0];
 });
 
 /**
@@ -247,7 +252,7 @@ Socket.prototype.__defineGetter__('protocol', function protocolGetter() {
  */
 
 Socket.prototype.__defineGetter__('secure', function secureGetter() {
-  return this.protocol === 'https';
+    return this.protocol === 'https';
 });
 
 /**
@@ -260,7 +265,7 @@ Socket.prototype.__defineGetter__('secure', function secureGetter() {
  */
 
 Socket.prototype.__defineGetter__('ip', function ipGetter() {
-  return this.ips[0] || this.conn.remoteAddress;
+    return this.ips[0] || this.conn.remoteAddress;
 });
 
 /**
@@ -276,11 +281,10 @@ Socket.prototype.__defineGetter__('ip', function ipGetter() {
  */
 
 Socket.prototype.__defineGetter__('ips', function ipsGetter() {
-  var proxy = this.server.proxy;
-  var val = this.get('X-Forwarded-For');
-  return proxy && val
-    ? val.split(/ *, */)
-    : [];
+    var proxy = this.server.proxy;
+    var val = this.get('X-Forwarded-For');
+    return proxy && val ?
+        val.split(/ *, */) : [];
 });
 
 /**
@@ -306,41 +310,43 @@ Socket.prototype.__defineGetter__('ips', function ipsGetter() {
  */
 
 Socket.prototype.get = function socketGet(_field) {
-  var req = this.request;
-  var field = _field.toLowerCase();
-  switch (field) {
-    case 'referer':
-    case 'referrer':
-      return req.headers.referrer || req.headers.referer;
-    default:
-      return req.headers[field];
-  }
+    var req = this.request;
+    var field = _field.toLowerCase();
+    switch (field) {
+        case 'referer':
+        case 'referrer':
+            return req.headers.referrer || req.headers.referer;
+        default:
+            return req.headers[field];
+    }
 };
 
 
 // for compact
 Socket.prototype.set = function socketSet() {
-  debug('socket.io can not set header');
+    debug('socket.io can not set header');
 };
 
 
 // emit message if set encrypt 
 //  befor emit encrypt.
 
-Socket.prototype.emit = function (event, message) {
-  var msg = message;
-  var self = this;
-  (async function () {   // encrypt
-    if (self.encrypt && _.isFunction(self.encrypt)) {
-      try {
-        msg = await self.encrypt(msg);
-      } catch (err) {
-        debug(err);
-      }
-    }
-  })()
-  this.socket.emit(event, msg);
-  debug('emit message to client');
+Socket.prototype.emit = function(event, message) {
+    var msg = message;
+    var self = this;
+    console.log("323233332323233223111")
+        (async function() { // encrypt
+            if (self.encrypt && _.isFunction(self.encrypt)) {
+                try {
+                    console.log("323233332323233223")
+                    msg = await self.encrypt(msg);
+                } catch (err) {
+                    debug(err);
+                }
+            }
+        })()
+    this.socket.emit(event, msg);
+    debug('emit message to client');
 };
 
 

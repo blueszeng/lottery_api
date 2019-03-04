@@ -16,32 +16,32 @@ const isGeneratorFunction = require('is-generator-function');
  */
 
 function onconnect(nsp) {
-  debug('on connect');
-  return async function onconnectMiddleware(ctx, next) {
-    process.nextTick(
-      function () {
-        var socket = ctx.socket;
-        var fn = ctx._fn;
-        if (socket.client.conn.readyState !== 'open') {
-          console.log('next called after client was closed - ignoring socket');
-          return;
-        }
-        nsp.sockets.push(socket);
-        socket.onconnect();
+    debug('on connect');
+    return async function onconnectMiddleware(ctx, next) {
+        process.nextTick(
+            function() {
+                var socket = ctx.socket;
+                var fn = ctx._fn;
+                if (socket.client.conn.readyState !== 'open') {
+                    console.log('next called after client was closed - ignoring socket');
+                    return;
+                }
+                nsp.sockets.push(socket);
+                socket.onconnect();
 
-        if (fn) fn();
-        nsp.emit('connect', socket);
-        nsp.emit('connection', socket);
-        // after socket emit disconnect, resume middlewares
-        function ondisconnect() {
-          socket.once('disconnect', async function socketDisconnected(reason) {
-            debug('socket disconnect by %s', reason);
-            await next();
-          });
-        };
-        ondisconnect();
-      });
-  }
+                if (fn) fn();
+                nsp.emit('connect', socket);
+                nsp.emit('connection', socket);
+                // after socket emit disconnect, resume middlewares
+                function ondisconnect() {
+                    socket.once('disconnect', async function socketDisconnected(reason) {
+                        debug('socket disconnect by %s', reason);
+                        await next();
+                    });
+                };
+                ondisconnect();
+            });
+    }
 }
 
 /**
@@ -53,11 +53,11 @@ function onconnect(nsp) {
  */
 
 function createMiddleware(fn, nsp) {
-  return async function middleware(ctx, next) {
-    debug('yield next, continue middlewares');
-    var args = [ctx, next];
-    await fn.apply(ctx, args);
-  };
+    return async function middleware(ctx, next) {
+        debug('yield next, continue middlewares');
+        var args = [ctx, next];
+        await fn.apply(ctx, args);
+    };
 }
 
 /**
@@ -69,28 +69,28 @@ function createMiddleware(fn, nsp) {
  */
 
 exports.add = function add(client, fn) {
-  debug('adding socket to nsp %s', this.name);
-  var socket = Socket(this, client);
-  socket._fn = fn;
+    debug('adding socket to nsp %s', this.name);
+    var socket = Socket(this, client);
+    socket._fn = fn;
 
-  // koa style middleware support
-  if (!this.gen) {
-    this._onconnect = onconnect(this);
-    debug('compose middlewares');
-    this.gen = compose(this.fns.concat([this.router.middleware(), this._onconnect]));
-  }
-  this.gen(socket)
-    .catch(function catchError(err) {
-      console.log(err)
-      /* istanbul ignore else */
-      if (client.conn.readyState === 'open') {
-        /* istanbul ignore else */
-        if (err) {
-          return socket.socket.error(err.data || err.message);
-        }
-      }
-    });
-  return socket.socket;
+    // koa style middleware support
+    if (!this.gen) {
+        this._onconnect = onconnect(this);
+        debug('compose middlewares');
+        this.gen = compose(this.fns.concat([this.router.middleware(), this._onconnect]));
+    }
+    this.gen(socket)
+        .catch(function catchError(err) {
+            // console.log(err)
+            /* istanbul ignore else */
+            if (client.conn.readyState === 'open') {
+                /* istanbul ignore else */
+                if (err) {
+                    return socket.socket.error(err.data || err.message);
+                }
+            }
+        });
+    return socket.socket;
 };
 
 
@@ -101,12 +101,12 @@ exports.add = function add(client, fn) {
  * @api public
  */
 exports.use = function use(fn) {
-  if (typeof fn !== 'function') throw new TypeError('middleware must be a function!');
-  if (isGeneratorFunction(fn)) {
-    fn = convert(fn);
-  }
-  this.fns.push(createMiddleware(fn, this));
-  return this;
+    if (typeof fn !== 'function') throw new TypeError('middleware must be a function!');
+    if (isGeneratorFunction(fn)) {
+        fn = convert(fn);
+    }
+    this.fns.push(createMiddleware(fn, this));
+    return this;
 };
 
 /**
@@ -118,6 +118,6 @@ exports.use = function use(fn) {
  */
 
 exports.route = function route(event, handler) {
-  this.router.route(event, handler);
-  return this;
+    this.router.route(event, handler);
+    return this;
 };

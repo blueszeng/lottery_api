@@ -15,19 +15,18 @@ import crypto from './utils/crypto'
 import ioRoute from './socket/routes'
 
 const redisStore = koaRedis({
-  url: config.redisUrl
+    url: config.redisUrl
 })
 const app = new Koa()
-
-app.use(convert(cors()));
+app.use(convert(cors()))
 app.keys = [config.secretKeyBase]
 if (config.serveStatic) {
-  app.use(convert(require('koa-static')(path.join(__dirname, './public'))))
+    app.use(convert(require('koa-static')(path.join(__dirname, './public'))))
 }
 app.use(convert(session({
-  store: redisStore,
-  prefix: 'boss:sess:',
-  key: 'boss.sid'
+    store: redisStore,
+    prefix: 'boss:sess:',
+    key: 'boss.sid'
 })))
 
 app.use(bodyParser())
@@ -40,13 +39,13 @@ app.use(router.routes(), router.allowedMethods())
 console.log('listen port:', config.port)
 app.listen(config.port)
 
-app.io.use(async function (ctx, next) {
-  //on connect  
-  // add decrypt , encrypt func
-  ctx.decrypt = crypto.decryptCipher
-  ctx.encrypt = crypto.encryptCipher
-  await next();
-  // disconnect
+app.io.use(async function(ctx, next) {
+    //on connect  
+    // add decrypt , encrypt func
+    ctx.decrypt = crypto.decryptCipher
+    ctx.encrypt = crypto.encryptCipher
+    await next();
 });
 
 ioRoute(app.io); // add socket route
+global.io = app.io // 设置全局

@@ -16,23 +16,23 @@ var co = require('co');
  */
 
 function createChecker(_name) {
-  if (!_name) {
-    return function dummyChecker() {
-      return true;
-    };
-  }
-  var name = _name;
-  if (typeof name === 'string') {
-    name = name.replace(/\*/g, '.*?');
-    name = new RegExp('^' + name + '$');
-  }
+    if (!_name) {
+        return function dummyChecker() {
+            return true;
+        };
+    }
+    var name = _name;
+    if (typeof name === 'string') {
+        name = name.replace(/\*/g, '.*?');
+        name = new RegExp('^' + name + '$');
+    }
 
-  debug('regexp: %s', name);
-  return function checker(event) {
-    var match = event.match(name);
-    // only match the whole event
-    return match && match.index === 0 && match[0].length === event.length;
-  };
+    debug('regexp: %s', name);
+    return function checker(event) {
+        var match = event.match(name);
+        // only match the whole event
+        return match && match.index === 0 && match[0].length === event.length;
+    };
 }
 
 /**
@@ -41,32 +41,31 @@ function createChecker(_name) {
  */
 
 function createRoute(_event, _fn) {
-  var fn = _fn;
-  if (!_.isArray(_fn)) {
-    fn = [_fn]
-  }
-  var event = _event;
-  if (_.isFunction(event) || _.isArray(event)) {
-    fn = event;
-    event = null;
-  }
-
-  var checker = createChecker(event);
-  return async function createdRoute(ctx, next) {
-    debug('check `%s` to match `%s`, %s', ctx.event, event, checker(ctx.event));
-    if (!checker(ctx.event)) {
-      return await next();
+    var fn = _fn;
+    if (!_.isArray(_fn)) {
+        fn = [_fn]
     }
-    var gen = compose(fn);
-    gen(ctx, next)
-      .catch(function genError(err) {
-        console.log('error: ' + err.message);
-        console.error(err.stack);
-      });
-  };
-  // console.log("gsssssssssssssssssssss")
-  // var args = [ctx, next];
-  // await fn[0].apply(ctx, args);
+    var event = _event;
+    if (_.isFunction(event) || _.isArray(event)) {
+        fn = event;
+        event = null;
+    }
+
+    var checker = createChecker(event);
+    return async function createdRoute(ctx, next) {
+        debug('check `%s` to match `%s`, %s', ctx.event, event, checker(ctx.event));
+        if (!checker(ctx.event)) {
+            return await next();
+        }
+        var gen = compose(fn);
+        gen(ctx, next)
+            .catch(function genError(err) {
+                console.log('error: ' + err.message);
+                console.error(err.stack);
+            });
+    };
+    // var args = [ctx, next];
+    // await fn[0].apply(ctx, args);
 }
 
 /**
@@ -74,8 +73,8 @@ function createRoute(_event, _fn) {
  */
 
 function Router() {
-  if (!(this instanceof Router)) return new Router();
-  this.fns = [];
+    if (!(this instanceof Router)) return new Router();
+    this.fns = [];
 }
 
 /**
@@ -85,51 +84,51 @@ function Router() {
  */
 
 Router.prototype.middleware = function middleware() {
-  var router = this;
+    var router = this;
     // console.log('in router middleware', this.fns, compose);
-  var gen = compose(this.fns);
-  // console.log('in router middleware', gen);
-  //  console.log('in router middleware');
-  return async function route(ctx, next) {
-     debug('in router middleware');
-    if (!router.fns.length) {
-      debug('router not exist');
-      return await next();
-    }
-    var self = ctx;
-    var socket = ctx.socket;
-    // replace socket.onevent to start the router
-    socket._onevent = socket.onevent; // save old onevent func
-    socket.onevent = function monkeypatchedOnEvent(packet) {
-      var args = packet.data || [];
-      if (!args.length) {
-        console.log('event args not exist');
-        return socket._onevent(packet); //call old onevent 
-      }
-
-      self.event = args[0];
-      self.data = args.slice(1)[0];
-      (async function () {
-        if (ctx.decrypt && _.isFunction(ctx.decrypt)) {  // decrypt data
-          try {
-            self.data = await ctx.decrypt(self.data);
-          } catch (err) {
-            console.log(err);
-          }
+    var gen = compose(this.fns);
+    // console.log('in router middleware', gen);
+    //  console.log('in router middleware');
+    return async function route(ctx, next) {
+        debug('in router middleware');
+        if (!router.fns.length) {
+            debug('router not exist');
+            return await next();
         }
-      })()
-      gen(self)
-        .then(function genSuccess() {
-          socket._onevent(packet); //call old onevent 
-        })
-        .catch(function genError(err) {
-          console.log('error: ' + err.message);
-          console.error(err.stack);
-        });
-    };
+        var self = ctx;
+        var socket = ctx.socket;
+        // replace socket.onevent to start the router
+        socket._onevent = socket.onevent; // save old onevent func
+        socket.onevent = function monkeypatchedOnEvent(packet) {
+            var args = packet.data || [];
+            if (!args.length) {
+                console.log('event args not exist');
+                return socket._onevent(packet); //call old onevent 
+            }
 
-    await next();
-  };
+            self.event = args[0];
+            self.data = args.slice(1)[0];
+            (async function() {
+                if (ctx.decrypt && _.isFunction(ctx.decrypt)) { // decrypt data
+                    try {
+                        self.data = await ctx.decrypt(self.data);
+                    } catch (err) {
+                        console.log(err);
+                    }
+                }
+            })()
+            gen(self)
+                .then(function genSuccess() {
+                    socket._onevent(packet); //call old onevent 
+                })
+                .catch(function genError(err) {
+                    console.log('error: ' + err.message);
+                    console.error(err.stack);
+                });
+        };
+
+        await next();
+    };
 };
 
 
@@ -140,7 +139,7 @@ Router.prototype.middleware = function middleware() {
  */
 
 Router.prototype.route = function route(event, fn) {
-  this.fns.push(createRoute(event, fn));
+    this.fns.push(createRoute(event, fn));
 };
 
 /**
