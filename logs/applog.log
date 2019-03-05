@@ -1538,3 +1538,640 @@
                 Request Body: {}
                 Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
                 Response Body: {"reqId":"","message":"未授权的访问"}
+[2019-03-05T12:45:08.505] [INFO] lotteryApp - [2019-03-05 12:45:08] [::ffff:192.168.0.111] [GET] [/api/box/1] [200] [146ms]
+                Request Id: nl7KHNzzLEa5RIdg
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"ba20c35e-7cd7-f8ac-1ce8-618d7dd6c472","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"nl7KHNzzLEa5RIdg","data":[{"pirce":30,"name":"1号","Goods":[{"id":1,"icon":"http://dsdsd.png","name":"火掐外套","BoxGoods":{"drop_probability":0.3}},{"id":2,"icon":"http://23233.png","name":"屠龙","BoxGoods":{"drop_probability":0.5}}]}]}
+[2019-03-05T13:44:43.401] [INFO] lotteryApp - [2019-03-05 13:44:43] [::ffff:192.168.0.111] [GET] [/api/box/1] [510] [61ms]
+                Request Id: jW7whabbL2r9ZUrY
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"46008af1-4065-2587-c44a-c546eefd8808","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"jW7whabbL2r9ZUrY","message":"ER_BAD_FIELD_ERROR: Unknown column 'Goods.icon' in 'field list'"}
+[2019-03-05T13:45:06.307] [INFO] lotteryApp - [2019-03-05 13:45:06] [::ffff:192.168.0.111] [GET] [/api/box/1] [510] [97ms]
+                Request Id: rGKguKrr9mwkMuor
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"4232a989-0e10-9507-dfad-890ddff73b6f","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"rGKguKrr9mwkMuor","message":"Op is not defined"}
+[2019-03-05T13:46:24.610] [INFO] lotteryApp - [2019-03-05 13:46:24] [::ffff:192.168.0.111] [GET] [/api/box/1] [510] [57ms]
+                Request Id: 4n6MU6MMagGb6CLA
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"6503390f-c138-ad20-4fc9-66416edb44a6","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"4n6MU6MMagGb6CLA","message":"Cannot read property 'in' of undefined"}
+[2019-03-05T13:47:39.274] [INFO] lotteryApp - [2019-03-05 13:47:39] [::ffff:192.168.0.111] [GET] [/api/box/1] [510] [40ms]
+                Request Id: 7lZqhgMMzYXZosgo
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"dee86eca-5d5c-45b1-d41f-db30ab0d6b7f","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"7lZqhgMMzYXZosgo","message":"Cannot read property 'in' of undefined"}
+[2019-03-05T13:48:45.083] [INFO] lotteryApp - [2019-03-05 13:48:45] [::ffff:192.168.0.111] [GET] [/api/box/1] [510] [63ms]
+                Request Id: dBlWtz77w2XQqIMK
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"25214521-0621-fbf7-e8ed-2bf5ea2d913e","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"dBlWtz77w2XQqIMK","message":"Cannot read property 'in' of undefined"}
+[2019-03-05T13:49:02.027] [INFO] lotteryApp - [2019-03-05 13:49:01] [::ffff:192.168.0.111] [GET] [/api/box/1] [200] [41ms]
+                Request Id: 8QVRsz663PnX9cwR
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"c17ce40c-e74a-ddfd-cd30-c1bfa30e6a7c","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"8QVRsz663PnX9cwR","data":[{"pirce":30,"name":"1号","Goods":[{"id":1,"img":"http://dsdsd.png","name":"火掐外套","BoxGoods":{"drop_probability":0.3}},{"id":2,"img":"http://23233.png","name":"屠龙","BoxGoods":{"drop_probability":0.5}}]}]}
+[2019-03-05T13:49:02.438] [INFO] lotteryApp - [2019-03-05 13:49:02] [::ffff:192.168.0.111] [GET] [/api/box/1] [200] [14ms]
+                Request Id: LV6KTz11rYgBzc42
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"2494cc49-9265-89c2-f968-1601b7074d05","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"LV6KTz11rYgBzc42","data":[{"pirce":30,"name":"1号","Goods":[{"id":1,"img":"http://dsdsd.png","name":"火掐外套","BoxGoods":{"drop_probability":0.3}},{"id":2,"img":"http://23233.png","name":"屠龙","BoxGoods":{"drop_probability":0.5}}]}]}
+[2019-03-05T13:49:26.173] [INFO] lotteryApp - [2019-03-05 13:49:26] [::ffff:192.168.0.111] [GET] [/api/box/1] [510] [99ms]
+                Request Id: YpWgF955O6pZAIVo
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"98ad1caf-a96c-d517-3d11-aafd4f69d5d0","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"YpWgF955O6pZAIVo","message":"Cannot read property 'in' of undefined"}
+[2019-03-05T13:49:26.615] [INFO] lotteryApp - [2019-03-05 13:49:26] [::ffff:192.168.0.111] [GET] [/api/box/1] [510] [16ms]
+                Request Id: 4nj3H6MMarw5QhVo
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"6cc964df-ce4d-eedf-bd70-fd9d89f2e745","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"4nj3H6MMarw5QhVo","message":"Cannot read property 'in' of undefined"}
+[2019-03-05T13:56:29.188] [INFO] lotteryApp - [2019-03-05 13:56:29] [::ffff:192.168.0.111] [GET] [/api/box/1] [510] [42ms]
+                Request Id: z5QKuv22kZQ7zcb7
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"04e46c27-b0d0-33fe-8f09-c2fa98ff3d77","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"z5QKuv22kZQ7zcb7","message":"Cannot read property 'in' of undefined"}
+[2019-03-05T14:04:19.237] [INFO] lotteryApp - [2019-03-05 14:04:19] [::ffff:192.168.0.111] [GET] [/api/box/1] [510] [59ms]
+                Request Id: n44ncNzzM9ObLSKR
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"3f47113c-7f21-bcf0-8a6c-d43132fc5496","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"n44ncNzzM9ObLSKR","message":"Goods is not associated to Box!"}
+[2019-03-05T14:04:56.896] [INFO] lotteryApp - [2019-03-05 14:04:56] [::ffff:192.168.0.111] [GET] [/api/box/1] [510] [43ms]
+                Request Id: bDDLFWEE9kmvwf4E
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"b2378467-ad79-e0ce-d045-cccffbc26e75","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"bDDLFWEE9kmvwf4E","message":"Goods is not associated to Box!"}
+[2019-03-05T14:05:55.005] [INFO] lotteryApp - [2019-03-05 14:05:54] [::ffff:192.168.0.111] [GET] [/api/box/1] [510] [40ms]
+                Request Id: 1pdBTNWWGLKAZH1Q
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"bd61c652-1192-0c80-617b-c90a4ea4c818","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"1pdBTNWWGLKAZH1Q","message":"Goods is not associated to Box!"}
+[2019-03-05T14:06:21.834] [INFO] lotteryApp - [2019-03-05 14:06:21] [::ffff:192.168.0.111] [GET] [/api/box/1] [200] [41ms]
+                Request Id: ZrdoI3ddq5yW3t61
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"d07664f4-1e41-8bc3-6dd0-e5d5e594825e","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"ZrdoI3ddq5yW3t61","data":[{"id":1,"box_type_id":1,"icon":"http://ddsd.png","name":"1号","pirce":30,"open":true,"show":true,"created_at":"2019-03-01T00:00:00.000Z","updated_at":"2019-03-01T00:00:00.000Z"}]}
+[2019-03-05T14:06:22.293] [INFO] lotteryApp - [2019-03-05 14:06:22] [::ffff:192.168.0.111] [GET] [/api/box/1] [200] [9ms]
+                Request Id: akr6H8rrv9lBdHRk
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"c1f0805d-be89-6303-586c-684f35064846","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"akr6H8rrv9lBdHRk","data":[{"id":1,"box_type_id":1,"icon":"http://ddsd.png","name":"1号","pirce":30,"open":true,"show":true,"created_at":"2019-03-01T00:00:00.000Z","updated_at":"2019-03-01T00:00:00.000Z"}]}
+[2019-03-05T14:09:02.433] [INFO] lotteryApp - [2019-03-05 14:09:02] [::ffff:192.168.0.111] [GET] [/api/box/1] [510] [38ms]
+                Request Id: akYoC8rrvnyA1C5b
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"3e3ded01-529e-a8da-b8b7-ab7cfefd96d1","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"akYoC8rrvnyA1C5b","message":"Goods is not associated to Box!"}
+[2019-03-05T14:11:21.052] [INFO] lotteryApp - [2019-03-05 14:11:20] [::ffff:192.168.0.111] [GET] [/api/box/1] [510] [55ms]
+                Request Id: 4ZLzT6MMadymAHn8
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"e2d42944-47d1-499e-875c-61afd1d13072","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"4ZLzT6MMadymAHn8","message":"Goods is not associated to Box!"}
+[2019-03-05T14:11:21.900] [INFO] lotteryApp - [2019-03-05 14:11:21] [::ffff:192.168.0.111] [GET] [/api/box/1] [510] [8ms]
+                Request Id: 5j8mT1vvmOdROtZk
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"740f37f3-f439-d063-de0e-94923fe63960","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"5j8mT1vvmOdROtZk","message":"Goods is not associated to Box!"}
+[2019-03-05T14:15:59.558] [INFO] lotteryApp - [2019-03-05 14:15:59] [::ffff:192.168.0.111] [GET] [/api/box/1] [510] [47ms]
+                Request Id: nLRDCNzzMlQ34HvZ
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"b89fb21f-1d4d-8354-addb-4495e115e9e1","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"nLRDCNzzMlQ34HvZ","message":"Goods is not associated to Box!"}
+[2019-03-05T14:17:27.561] [INFO] lotteryApp - [2019-03-05 14:17:27] [::ffff:192.168.0.111] [GET] [/api/box/1] [510] [51ms]
+                Request Id: M4wvCg44QMaOLHa8
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"20733d4d-e470-7e34-100e-0065f39944f0","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"M4wvCg44QMaOLHa8","message":"Goods is not associated to Box!"}
+[2019-03-05T14:17:28.467] [INFO] lotteryApp - [2019-03-05 14:17:28] [::ffff:192.168.0.111] [GET] [/api/box/1] [510] [21ms]
+                Request Id: BB3OSLpprXBv7tkV
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"7bf5308a-f26f-dcb4-938f-32d9177cc4e2","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"BB3OSLpprXBv7tkV","message":"Goods is not associated to Box!"}
+[2019-03-05T14:17:29.313] [INFO] lotteryApp - [2019-03-05 14:17:29] [::ffff:192.168.0.111] [GET] [/api/box/1] [510] [7ms]
+                Request Id: EL56uZ99kBQgWfBQ
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"d0d343b2-cb19-8b9d-5c6a-3e2fc6a8fa1e","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"EL56uZ99kBQgWfBQ","message":"Goods is not associated to Box!"}
+[2019-03-05T14:17:30.002] [INFO] lotteryApp - [2019-03-05 14:17:29] [::ffff:192.168.0.111] [GET] [/api/box/1] [510] [9ms]
+                Request Id: 7pEncgMMzkZX4Sgr
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"0485223d-0d91-8915-265e-c59e96406399","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"7pEncgMMzkZX4Sgr","message":"Goods is not associated to Box!"}
+[2019-03-05T14:26:21.905] [INFO] lotteryApp - [2019-03-05 14:26:21] [::ffff:192.168.0.111] [GET] [/api/box/1] [200] [72ms]
+                Request Id: NgOVuYggDXdARcAl
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"91f64716-6eb6-07dc-f06a-c5daddcd39f3","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"NgOVuYggDXdARcAl","data":[{"id":1,"box_type_id":1,"icon":"http://ddsd.png","name":"1号","pirce":30,"open":true,"show":true,"created_at":"2019-03-01T00:00:00.000Z","updated_at":"2019-03-01T00:00:00.000Z","Goods":[{"id":1,"img":"http://dsdsd.png","name":"火掐外套","BoxGoods":{"id":1,"box_id":1,"goods_id":1,"drop_probability":0.3,"show":true,"created_at":"2019-01-03T00:00:00.000Z","updated_at":"2019-01-03T00:00:00.000Z"}},{"id":2,"img":"http://23233.png","name":"屠龙","BoxGoods":{"id":2,"box_id":1,"goods_id":2,"drop_probability":0.5,"show":true,"created_at":"2019-01-03T00:00:00.000Z","updated_at":"2019-01-03T00:00:00.000Z"}}]}]}
+[2019-03-05T14:27:01.750] [INFO] lotteryApp - [2019-03-05 14:27:01] [::ffff:192.168.0.111] [GET] [/api/box/1] [200] [89ms]
+                Request Id: BBLwfLpprmlmOFnw
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"d6e22b8a-791c-f2c0-8c9f-c30b983b06b7","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"BBLwfLpprmlmOFnw","data":[{"pirce":30,"name":"1号","Goods":[{"id":1,"img":"http://dsdsd.png","name":"火掐外套","BoxGoods":{"drop_probability":0.3}},{"id":2,"img":"http://23233.png","name":"屠龙","BoxGoods":{"drop_probability":0.5}}]}]}
+[2019-03-05T14:27:02.165] [INFO] lotteryApp - [2019-03-05 14:27:02] [::ffff:192.168.0.111] [GET] [/api/box/1] [200] [15ms]
+                Request Id: rWqYsKrr9gPDAFO6
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"67d447ac-f3ce-a91d-8a83-180e4dc0f15f","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"rWqYsKrr9gPDAFO6","data":[{"pirce":30,"name":"1号","Goods":[{"id":1,"img":"http://dsdsd.png","name":"火掐外套","BoxGoods":{"drop_probability":0.3}},{"id":2,"img":"http://23233.png","name":"屠龙","BoxGoods":{"drop_probability":0.5}}]}]}
+[2019-03-05T14:27:19.306] [INFO] lotteryApp - [2019-03-05 14:27:19] [::ffff:192.168.0.111] [GET] [/api/box/1] [510] [45ms]
+                Request Id: K6kQS866nrP99F29
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"faeafb4b-1050-28e7-df06-82a567dd0e04","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"K6kQS866nrP99F29","message":"Cannot read property 'id' of undefined"}
+[2019-03-05T14:27:48.678] [INFO] lotteryApp - [2019-03-05 14:27:48] [::ffff:192.168.0.111] [GET] [/api/box/1] [200] [103ms]
+                Request Id: 3zoGTaWWNZl3pHBR
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"1dbb37f4-6420-bcbf-6920-65d092e1439e","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"3zoGTaWWNZl3pHBR","data":[{"pirce":30,"name":"1号","Goods":[{"id":1,"img":"http://dsdsd.png","name":"火掐外套","BoxGoods":{"drop_probability":0.3}},{"id":2,"img":"http://23233.png","name":"屠龙","BoxGoods":{"drop_probability":0.5}}]}]}
+[2019-03-05T14:28:18.482] [INFO] lotteryApp - [2019-03-05 14:28:18] [::ffff:192.168.0.111] [GET] [/api/box/1] [200] [107ms]
+                Request Id: nLNauNzzMPE9LsWD
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"ec089a93-680b-c471-cafc-d8c8c745bc70","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"nLNauNzzMPE9LsWD","data":[{"pirce":30,"name":"1号","Goods":[{"id":1,"img":"http://dsdsd.png","name":"火掐外套","BoxGoods":{"drop_probability":0.3}},{"id":2,"img":"http://23233.png","name":"屠龙","BoxGoods":{"drop_probability":0.5}}]}]}
+[2019-03-05T14:28:51.341] [INFO] lotteryApp - [2019-03-05 14:28:51] [::ffff:192.168.0.111] [GET] [/api/box/1] [200] [53ms]
+                Request Id: ar66U8rrvQK6vFYM
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"7637fa2e-fbfe-0d95-11f3-daf7c08550e6","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"ar66U8rrvQK6vFYM","data":[{"pirce":30,"name":"1号","Goods":[{"id":1,"img":"http://dsdsd.png","name":"火掐外套","BoxGoods":{"drop_probability":0.3}},{"id":2,"img":"http://23233.png","name":"屠龙","BoxGoods":{"drop_probability":0.5}}]}]}
+[2019-03-05T14:29:12.045] [INFO] lotteryApp - [2019-03-05 14:29:11] [::ffff:192.168.0.111] [GET] [/api/box/1] [200] [148ms]
+                Request Id: 3zBXsaWWNlZyZizO
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"d05567c9-3479-ba7d-b9d9-0e88a6a654aa","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"3zBXsaWWNlZyZizO","data":[{"pirce":30,"name":"1号","Goods":[{"id":1,"img":"http://dsdsd.png","name":"火掐外套","BoxGoods":{"drop_probability":0.3}},{"id":2,"img":"http://23233.png","name":"屠龙","BoxGoods":{"drop_probability":0.5}}]}]}
+[2019-03-05T14:29:42.750] [INFO] lotteryApp - [2019-03-05 14:29:42] [::ffff:192.168.0.111] [GET] [/api/box/1] [200] [66ms]
+                Request Id: jbGkiabbLbXWlubW
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"6f326ca0-b75c-c3b3-8056-94c3a0fca2be","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"jbGkiabbLbXWlubW","data":[]}
+[2019-03-05T14:30:02.652] [INFO] lotteryApp - [2019-03-05 14:30:02] [::ffff:192.168.0.111] [GET] [/api/box/1] [200] [54ms]
+                Request Id: 6mojtBrr7rXE6tVM
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"8f267c8c-9baa-5f48-abed-021a4680f082","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"6mojtBrr7rXE6tVM","data":[]}
+[2019-03-05T14:30:09.852] [INFO] lotteryApp - [2019-03-05 14:30:09] [::ffff:192.168.0.111] [GET] [/api/box/1] [200] [159ms]
+                Request Id: 8r3Mcz6636l7Ghgk
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"4d625a85-9b16-4655-93e7-c2ec439b97a1","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"8r3Mcz6636l7Ghgk","data":[]}
+[2019-03-05T14:33:32.910] [INFO] lotteryApp - [2019-03-05 14:33:32] [::ffff:192.168.0.111] [GET] [/api/box/1] [200] [49ms]
+                Request Id: yKXMSOAAaoAr8Imp
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"0db78520-325c-766b-ff85-4a47ab5241f6","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"yKXMSOAAaoAr8Imp","data":[]}
+[2019-03-05T14:34:27.355] [INFO] lotteryApp - [2019-03-05 14:34:27] [::ffff:192.168.0.111] [GET] [/api/box/1] [200] [48ms]
+                Request Id: OABDTQAA8Eqplhpr
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"1cf7eae7-b8a2-58d4-669e-bbfb5d72d417","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"OABDTQAA8Eqplhpr","data":[]}
+[2019-03-05T14:34:53.223] [INFO] lotteryApp - [2019-03-05 14:34:53] [::ffff:192.168.0.111] [GET] [/api/box/1] [200] [43ms]
+                Request Id: WMBKIPMMzgLqBUWN
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"dadd9875-a55c-b12e-d597-e3a6f48dafa9","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"WMBKIPMMzgLqBUWN","data":[{"pirce":30,"name":"1号","Goods":[{"id":1,"img":"http://dsdsd.png","name":"火掐外套","goods_qualities_id":1,"BoxGoods":{"drop_probability":0.3}},{"id":2,"img":"http://23233.png","name":"屠龙","goods_qualities_id":2,"BoxGoods":{"drop_probability":0.5}}]}]}
+[2019-03-05T14:35:18.702] [INFO] lotteryApp - [2019-03-05 14:35:18] [::ffff:192.168.0.111] [GET] [/api/box/1] [200] [54ms]
+                Request Id: jbpkSabbL8alOf52
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"6f4cd328-2b81-36e6-2903-fcc4c20f76d7","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"jbpkSabbL8alOf52","data":[]}
+[2019-03-05T14:35:31.564] [INFO] lotteryApp - [2019-03-05 14:35:31] [::ffff:192.168.0.111] [GET] [/api/box/1] [200] [43ms]
+                Request Id: 5jbMC1vvmoNbrhGr
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"be287595-db07-2b67-1a2b-7f5881ce136b","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"5jbMC1vvmoNbrhGr","data":[]}
+[2019-03-05T14:35:50.559] [INFO] lotteryApp - [2019-03-05 14:35:50] [::ffff:192.168.0.111] [GET] [/api/box/1] [200] [91ms]
+                Request Id: M46QIg44Qw1X7Tp1
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"ee1c7407-a9af-d605-8a21-79048b21ff27","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"M46QIg44Qw1X7Tp1","data":[]}
+[2019-03-05T14:36:10.787] [INFO] lotteryApp - [2019-03-05 14:36:10] [::ffff:192.168.0.111] [GET] [/api/box/1] [200] [146ms]
+                Request Id: pvBNf8EELkzVzuGP
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"66398da9-920e-1703-32bd-8be5c824fc33","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"pvBNf8EELkzVzuGP","data":[]}
+[2019-03-05T14:36:42.440] [INFO] lotteryApp - [2019-03-05 14:36:42] [::ffff:192.168.0.111] [GET] [/api/box/1] [200] [39ms]
+                Request Id: NgbQhYggDB8XqFPo
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"cebd1e65-974f-753e-5741-2fc8cf1409d4","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"NgbQhYggDB8XqFPo","data":[{"pirce":30,"name":"1号","Goods":[{"id":1,"img":"http://dsdsd.png","name":"火掐外套","goods_qualities_id":1,"BoxGoods":{"drop_probability":0.3}},{"id":2,"img":"http://23233.png","name":"屠龙","goods_qualities_id":2,"BoxGoods":{"drop_probability":0.5}}]}]}
+[2019-03-05T14:37:01.917] [INFO] lotteryApp - [2019-03-05 14:37:01] [::ffff:192.168.0.111] [GET] [/api/box/1] [200] [43ms]
+                Request Id: rWlwIKrr9LNrKU9q
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"1de2af23-66f4-3d76-91e2-02990c664cb3","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"rWlwIKrr9LNrKU9q","data":[{"pirce":30,"name":"1号","Goods":[{"id":1,"img":"http://dsdsd.png","name":"火掐外套","goods_qualities_id":1,"BoxGoods":{"drop_probability":0.3}},{"id":2,"img":"http://23233.png","name":"屠龙","goods_qualities_id":2,"BoxGoods":{"drop_probability":0.5}}]}]}
+[2019-03-05T14:37:50.919] [INFO] lotteryApp - [2019-03-05 14:37:50] [::ffff:192.168.0.111] [GET] [/api/box/1] [200] [108ms]
+                Request Id: 223KUWMMlm1VYSoL
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"cc6dd9bb-2ee8-c7d2-b690-e68db9d3bb71","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"223KUWMMlm1VYSoL","data":[1,2]}
+[2019-03-05T14:38:11.548] [INFO] lotteryApp - [2019-03-05 14:38:11] [::ffff:192.168.0.111] [GET] [/api/box/1] [200] [53ms]
+                Request Id: nLGOFNzzMZ53MSGj
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"bc9615c7-2fe6-427c-1d9c-bf28a6f099fd","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"nLGOFNzzMZ53MSGj","data":[{"id":1,"img":"http://sdsddsd.png"}]}
+[2019-03-05T14:38:35.662] [INFO] lotteryApp - [2019-03-05 14:38:35] [::ffff:192.168.0.111] [GET] [/api/box/1] [200] [181ms]
+                Request Id: M4d7Tg44Q6Q3aSd3
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"02c2c351-9a6e-35f1-e15c-9bd2d4dd5edb","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"M4d7Tg44Q6Q3aSd3","data":{"pirce":30,"name":"1号","Goods":[{"id":1,"img":"http://dsdsd.png","name":"火掐外套","goods_qualities_id":1,"BoxGoods":{"drop_probability":0.3}},{"id":2,"img":"http://23233.png","name":"屠龙","goods_qualities_id":2,"BoxGoods":{"drop_probability":0.5}}]}}
+[2019-03-05T14:39:06.466] [INFO] lotteryApp - [2019-03-05 14:39:06] [::ffff:192.168.0.111] [GET] [/api/box/1] [200] [75ms]
+                Request Id: qarvHLpp9Mk8ZsNq
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"926911ee-fd57-4b0c-4656-0eaa3d62318e","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"qarvHLpp9Mk8ZsNq","data":{"pirce":30,"name":"1号","Goods":[{"id":1,"img":"http://dsdsd.png","name":"火掐外套","goods_qualities_id":1,"BoxGoods":{"drop_probability":0.3}},{"id":2,"img":"http://23233.png","name":"屠龙","goods_qualities_id":2,"BoxGoods":{"drop_probability":0.5}}]}}
+[2019-03-05T14:40:10.777] [INFO] lotteryApp - [2019-03-05 14:40:10] [::ffff:192.168.0.111] [GET] [/api/box/1] [200] [49ms]
+                Request Id: Y5L7t95524lqXhOz
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"59e29fe6-bb57-ddac-ddb9-8420eb0ee883","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"Y5L7t95524lqXhOz","data":{"pirce":30,"name":"1号","Goods":[{"id":1,"img":"http://dsdsd.png","name":"火掐外套","goods_qualities_id":1,"BoxGoods":{"drop_probability":0.3}},{"id":2,"img":"http://23233.png","name":"屠龙","goods_qualities_id":1,"BoxGoods":{"drop_probability":0.5}}]}}
+[2019-03-05T14:41:01.464] [INFO] lotteryApp - [2019-03-05 14:41:01] [::ffff:192.168.0.111] [GET] [/api/box/1] [200] [58ms]
+                Request Id: l8KEi688wpOGpsbP
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"060f107c-dc92-a047-fb9e-060d5bd846d1","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"l8KEi688wpOGpsbP","data":{"pirce":30,"name":"1号","Goods":[{"id":1,"img":"http://dsdsd.png","name":"火掐外套","goods_qualities_id":1,"BoxGoods":{"drop_probability":0.3}},{"id":2,"img":"http://23233.png","name":"屠龙","goods_qualities_id":1,"BoxGoods":{"drop_probability":0.5}}]}}
+[2019-03-05T14:41:17.866] [INFO] lotteryApp - [2019-03-05 14:41:17] [::ffff:192.168.0.111] [GET] [/api/box/1] [200] [153ms]
+                Request Id: 22R9TWMMgpYDvtND
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"499db002-dce2-3c09-7426-5ff4eded097a","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"22R9TWMMgpYDvtND","data":{"pirce":30,"name":"1号","Goods":[{"id":1,"img":"http://dsdsd.png","name":"火掐外套","goods_qualities_id":"http://sdsddsd.png","BoxGoods":{"drop_probability":0.3}},{"id":2,"img":"http://23233.png","name":"屠龙","goods_qualities_id":"http://sdsddsd.png","BoxGoods":{"drop_probability":0.5}}]}}
+[2019-03-05T14:42:58.449] [INFO] lotteryApp - [2019-03-05 14:42:58] [::ffff:192.168.0.111] [GET] [/api/box/1] [200] [192ms]
+                Request Id: l8ymt688w3gdbhNa
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"e2aab0e2-1782-7ed9-c965-2855685fe28a","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"l8ymt688w3gdbhNa","data":"http://sdsddsd.png"}
+[2019-03-05T14:43:16.140] [INFO] lotteryApp - [2019-03-05 14:43:16] [::ffff:192.168.0.111] [GET] [/api/box/1] [200] [65ms]
+                Request Id: L1ypHz115EGjkcDw
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"1c0b5932-a9cd-91ee-5216-10efd409dbf8","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"L1ypHz115EGjkcDw","data":{"id":2,"img":"http://23233.png","name":"屠龙","goods_qualities_id":1,"BoxGoods":{"drop_probability":0.5}}}
+[2019-03-05T14:44:03.341] [INFO] lotteryApp - [2019-03-05 14:44:03] [::ffff:192.168.0.111] [GET] [/api/box/1] [200] [55ms]
+                Request Id: jbADUabbDONGmtW5
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"ebeed063-f12e-3e94-b933-57fba365a538","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"jbADUabbDONGmtW5","data":"{\"id\":2,\"img\":\"http://23233.png\",\"name\":\"屠龙\",\"goods_qualities_id\":1,\"BoxGoods\":{\"drop_probability\":0.5}}"}
+[2019-03-05T14:45:03.758] [INFO] lotteryApp - [2019-03-05 14:45:03] [::ffff:192.168.0.111] [GET] [/api/box/1] [200] [54ms]
+                Request Id: GvaEt5MMv4k37sO
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"1f8e599e-fd80-fdd8-40fd-965f9ba9cc43","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"GvaEt5MMv4k37sO","data":"[{\"id\":1,\"img\":\"http://dsdsd.png\",\"name\":\"火掐外套\",\"goods_qualities_id\":1,\"BoxGoods\":{\"drop_probability\":0.3}},{\"id\":2,\"img\":\"http://23233.png\",\"name\":\"屠龙\",\"goods_qualities_id\":1,\"BoxGoods\":{\"drop_probability\":0.5}}]"}
+[2019-03-05T14:48:36.262] [INFO] lotteryApp - [2019-03-05 14:48:36] [::ffff:192.168.0.111] [GET] [/api/box/1] [200] [106ms]
+                Request Id: RwQVhjww4nGG1HjZ
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"fa631428-d9ef-024d-952c-a86bfc558500","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"RwQVhjww4nGG1HjZ","data":{"pirce":30,"name":"1号","Goods":[{"id":1,"img":"http://dsdsd.png","name":"火掐外套","goods_qualities_id":1,"BoxGoods":{"drop_probability":0.3},"qualities_img":"http://sdsddsd.png"},{"id":2,"img":"http://23233.png","name":"屠龙","goods_qualities_id":1,"BoxGoods":{"drop_probability":0.5},"qualities_img":"http://sdsddsd.png"}]}}
+[2019-03-05T15:25:25.074] [INFO] lotteryApp - [2019-03-05 15:25:25] [::ffff:192.168.0.111] [GET] [//api/goods/1/exchange] [401] [4ms]
+                Request Id: 
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"b3ae76d1-e85a-d7dd-eb64-4c594b489d8a","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"","message":"未授权的访问"}
+[2019-03-05T15:25:41.149] [INFO] lotteryApp - [2019-03-05 15:25:41] [::ffff:192.168.0.111] [GET] [/api/goods/1/exchange] [200] [40ms]
+                Request Id: bPvmTWEEk17mQIqE
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"4a719be3-21a8-b3bb-38cd-40f65749dea0","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"bPvmTWEEk17mQIqE","data":{"game":{"id":1,"name":"data"},"goods":[{"id":1,"img":"http://dsdsd.png","name":"火掐外套","skin_name":"无敌","discrable":"久经战场","exchange_price":101},{"id":2,"img":"http://23233.png","name":"屠龙","skin_name":"无敌2","discrable":"久经战场","exchange_price":500}]}}
+[2019-03-05T16:05:01.364] [INFO] lotteryApp - [2019-03-05 16:05:01] [::ffff:192.168.0.111] [GET] [/api/goods/1/exchange] [510] [38ms]
+                Request Id: R7G7sjwwGXgLdi1y
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"1c1626f5-e494-43df-79c4-ce65bc192a96","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"R7G7sjwwGXgLdi1y","message":"无法执行所需的请求"}
+[2019-03-05T16:05:55.678] [INFO] lotteryApp - [2019-03-05 16:05:55] [::ffff:192.168.0.111] [GET] [/api/goods/exchangelist] [510] [25ms]
+                Request Id: 96n6FqddV12AwtPM
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"4f578a3e-9501-931a-f8a3-48da8c51991c","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"96n6FqddV12AwtPM","message":"无法执行所需的请求"}
+[2019-03-05T16:06:42.369] [INFO] lotteryApp - [2019-03-05 16:06:42] [::ffff:192.168.0.111] [GET] [/api/goods/exchangelist] [510] [25ms]
+                Request Id: 39GlsaWWvwr8OhOV
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"cb8bee9a-6bac-c03a-2ec6-e7747f791c07","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"39GlsaWWvwr8OhOV","message":"游戏id必须提供"}
+[2019-03-05T16:07:01.133] [INFO] lotteryApp - [2019-03-05 16:07:01] [::ffff:192.168.0.111] [GET] [/api/goods/exchangelist] [510] [2ms]
+                Request Id: XbLkc633b8NR7tpE
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"18b97a93-a37b-e251-de6e-8f409c3d4924","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {"gameId":"1"}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"XbLkc633b8NR7tpE","message":"gameTmp is not defined"}
+[2019-03-05T16:07:13.811] [INFO] lotteryApp - [2019-03-05 16:07:13] [::ffff:192.168.0.111] [GET] [/api/goods/exchangelist] [510] [34ms]
+                Request Id: p3RKF8EEd6E1RulY
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"e9e08152-ea41-7ae3-55a3-f8f657af234b","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {"gameId":"1"}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"p3RKF8EEd6E1RulY","message":"gameId is not defined"}
+[2019-03-05T16:07:30.867] [INFO] lotteryApp - [2019-03-05 16:07:30] [::ffff:192.168.0.111] [GET] [/api/goods/exchangelist] [200] [74ms]
+                Request Id: kVA2sPBBkvDp2s6j
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"defc2755-86c2-3030-3d79-b1e51363fc31","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {"gameId":"1"}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"kVA2sPBBkvDp2s6j","data":{"game":{"id":1,"name":"data"},"goods":[{"id":1,"img":"http://dsdsd.png","name":"火掐外套","skin_name":"无敌","discrable":"久经战场","exchange_price":101},{"id":2,"img":"http://23233.png","name":"屠龙","skin_name":"无敌2","discrable":"久经战场","exchange_price":500}]}}
+[2019-03-05T16:08:01.993] [INFO] lotteryApp - [2019-03-05 16:08:01] [::ffff:192.168.0.111] [GET] [/api/goods/exchangelist] [200] [35ms]
+                Request Id: EMjPTZ99ykkdoCMq
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"02809c78-14a5-50b4-4fe0-99c5603dee5c","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {"gameId":"1"}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"EMjPTZ99ykkdoCMq","data":{"game":{"id":1,"name":"data"},"goods":[{"id":1,"img":"http://dsdsd.png","name":"火掐外套","skin_name":"无敌","discrable":"久经战场","exchange_price":101},{"id":2,"img":"http://23233.png","name":"屠龙","skin_name":"无敌2","discrable":"久经战场","exchange_price":500}]}}
+[2019-03-05T16:09:05.024] [INFO] lotteryApp - [2019-03-05 16:09:04] [::ffff:192.168.0.111] [GET] [/api/goods/exchangelist] [200] [59ms]
+                Request Id: q5PzuLpp3nEAPUd2
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"d565ea04-7f3e-c6f7-18f8-ee9bd98d947b","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {"gameId":"1","offset":"1"}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"q5PzuLpp3nEAPUd2","data":{"game":{"id":1,"name":"data"},"goods":[]}}
+[2019-03-05T16:09:28.053] [INFO] lotteryApp - [2019-03-05 16:09:27] [::ffff:192.168.0.111] [GET] [/api/goods/exchangelist] [200] [145ms]
+                Request Id: 5aOqH1vvXWmVDh5n
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"c0acff49-1b04-b0ce-d138-bc487bb6b12b","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {"gameId":"1","offset":"1"}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"5aOqH1vvXWmVDh5n","data":{"game":{"id":1,"name":"data"},"goods":[{"id":2,"img":"http://23233.png","name":"屠龙","skin_name":"无敌2","discrable":"久经战场","exchange_price":500}]}}
+[2019-03-05T16:28:50.256] [INFO] lotteryApp - [2019-03-05 16:28:50] [::ffff:192.168.0.111] [GET] [/api/goods/exchangelist] [510] [38ms]
+                Request Id: 9yLQcqddVkWAVHRM
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"7b0b8d00-eb10-cb84-1218-5b54018929af","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {"gameId":"1","goods_name":"'sb'"}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"9yLQcqddVkWAVHRM","message":"uery is not defined"}
+[2019-03-05T16:28:59.246] [INFO] lotteryApp - [2019-03-05 16:28:59] [::ffff:192.168.0.111] [GET] [/api/goods/exchangelist] [510] [19ms]
+                Request Id: ZGO7I3dd5ko2msbR
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"44a7bfde-7a70-8c5f-9db6-e6b31e6ca2d9","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {"gameId":"1","goods_name":"'sb'"}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"ZGO7I3dd5ko2msbR","message":"uery is not defined"}
+[2019-03-05T16:29:25.336] [INFO] lotteryApp - [2019-03-05 16:29:25] [::ffff:192.168.0.111] [GET] [/api/goods/exchangelist] [510] [28ms]
+                Request Id: oKjEUd22LzQrmUwa
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"0ae4263b-2768-57ea-661d-f8105059462d","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {"gameId":"1","goods_name":"'sb'"}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"oKjEUd22LzQrmUwa","message":"pageLenq is not defined"}
+[2019-03-05T16:29:38.618] [INFO] lotteryApp - [2019-03-05 16:29:38] [::ffff:192.168.0.111] [GET] [/api/goods/exchangelist] [200] [149ms]
+                Request Id: aYv2C8rr9gGQ8f6l
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"b58e1dba-3bf3-6dee-1247-5d43b33f30d8","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {"gameId":"1","goods_name":"'sb'"}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"aYv2C8rr9gGQ8f6l","data":{"game":{"id":1,"name":"data"},"goods":[]}}
+[2019-03-05T16:29:44.776] [INFO] lotteryApp - [2019-03-05 16:29:44] [::ffff:192.168.0.111] [GET] [/api/goods/exchangelist] [200] [11ms]
+                Request Id: qR73SLpp3j2vNhp2
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"cb88c28e-ec44-c29d-0e0e-7a037f04721c","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {"gameId":"1"}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"qR73SLpp3j2vNhp2","data":{"game":{"id":1,"name":"data"},"goods":[{"id":1,"img":"http://dsdsd.png","name":"火掐外套","skin_name":"无敌","discrable":"久经战场","exchange_price":101},{"id":2,"img":"http://23233.png","name":"屠龙","skin_name":"无敌2","discrable":"久经战场","exchange_price":500}]}}
+[2019-03-05T16:30:05.745] [INFO] lotteryApp - [2019-03-05 16:30:05] [::ffff:192.168.0.111] [GET] [/api/goods/exchangelist] [200] [29ms]
+                Request Id: R8o1fjwwGp3MXILB
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"3e86a8e4-6ec7-cb4f-4aab-3c9f54365112","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {"gameId":"1","goods_name":"'火掐外套'"}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"R8o1fjwwGp3MXILB","data":{"game":{"id":1,"name":"data"},"goods":[]}}
+[2019-03-05T16:30:13.269] [INFO] lotteryApp - [2019-03-05 16:30:13] [::ffff:192.168.0.111] [GET] [/api/goods/exchangelist] [200] [23ms]
+                Request Id: brbWuWEEzDRDvTv
+                Request Headers: {"host":"192.168.0.111:3001","connection":"keep-alive","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"fb1a55e8-e52f-30dc-4acd-b80dcc8cebd3","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {"gameId":"1","goods_name":"火掐外套"}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"brbWuWEEzDRDvTv","data":{"game":{"id":1,"name":"data"},"goods":[{"id":1,"img":"http://dsdsd.png","name":"火掐外套","skin_name":"无敌","discrable":"久经战场","exchange_price":101}]}}
+[2019-03-05T17:51:31.580] [INFO] lotteryApp - [2019-03-05 17:51:31] [::ffff:192.168.0.111] [GET] [/api/goods/goodsTypeslist] [200] [31ms]
+                Request Id: WqOZMfPMMOm72DhmL
+                Request Headers: {"host":"192.168.0.111:3001","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"b098a387-d14d-e657-f66d-7c3f66dc8d1e","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"WqOZMfPMMOm72DhmL","data":{"goodsTypes":[]}}
+[2019-03-05T17:55:36.663] [INFO] lotteryApp - [2019-03-05 17:55:36] [::ffff:192.168.0.111] [GET] [/api/goods/goodsTypeslist] [200] [47ms]
+                Request Id: pajEvT8EE7rOrzUGa
+                Request Headers: {"host":"192.168.0.111:3001","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"814e4c96-d1c7-a99f-a3d5-ed13e6f364c8","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"pajEvT8EE7rOrzUGa","data":{"goodsTypes":[{"id":1,"name":"手枪","GoodsModels":[{"id":1,"name":"awm"},{"id":2,"name":"m416"}]},{"id":2,"name":"手套","GoodsModels":[]}]}}
+[2019-03-05T18:04:59.779] [INFO] lotteryApp - [2019-03-05 18:04:59] [::ffff:192.168.0.111] [GET] [/api/goods/goodsTypeslist] [200] [33ms]
+                Request Id: BoGVBCLppoPmqVIAp
+                Request Headers: {"host":"192.168.0.111:3001","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"6fa06009-8fa6-ce0d-9b44-cfca581847c8","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"BoGVBCLppoPmqVIAp","data":{"goodsTypes":[{"id":1,"name":"手枪","GoodsModels":[{"id":1,"name":"awm"},{"id":2,"name":"m416"}]},{"id":2,"name":"手套","GoodsModels":[]}]}}
+[2019-03-05T18:06:12.972] [INFO] lotteryApp - [2019-03-05 18:06:12] [::ffff:192.168.0.111] [GET] [/api/goods/goodsTypeslist] [200] [16ms]
+                Request Id: X7ZD3T6337Wd3OcQq
+                Request Headers: {"host":"192.168.0.111:3001","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"34a85537-2571-417a-5918-e53469be41c7","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"X7ZD3T6337Wd3OcQq","data":{"goodsTypes":[{"id":1,"name":"手枪","GoodsModels":[{"id":1,"name":"awm"},{"id":2,"name":"m416"}]},{"id":2,"name":"手套","GoodsModels":[{"id":3,"name":"摩托车手套"}]}]}}
+[2019-03-05T18:07:47.547] [INFO] lotteryApp - [2019-03-05 18:07:47] [::ffff:192.168.0.111] [GET] [/api/goods/1] [401] [1ms]
+                Request Id: 2YbA2CWMMQ6r8riYP
+                Request Headers: {"host":"192.168.0.111:3001","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"d1ad2534-b497-977d-df43-fde240ce065d","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"2YbA2CWMMQ6r8riYP","message":"未授权的访问"}
+[2019-03-05T18:09:52.595] [INFO] lotteryApp - [2019-03-05 18:09:52] [::ffff:192.168.0.111] [GET] [/api/goods/goodsModel/1] [200] [24ms]
+                Request Id: G31GLS5MMmPZAqCOb
+                Request Headers: {"host":"192.168.0.111:3001","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"8ffb6d5d-36ff-7d0a-acbf-ca6b8499f06d","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"G31GLS5MMmPZAqCOb","data":{"goods":[{"id":1,"img":"http://dsdsd.png","name":"awm狙击枪","skin_name":"无损","discrable":"久经战场","exchange_price":101},{"id":3,"img":"http://23233.png","name":"awm狙击枪","skin_name":"有损","discrable":"久经战场","exchange_price":400}]}}
+[2019-03-05T18:09:58.228] [INFO] lotteryApp - [2019-03-05 18:09:58] [::ffff:192.168.0.111] [GET] [/api/goods/goodsModel/2] [200] [5ms]
+                Request Id: g9zbkT3QQyP6aEcEn
+                Request Headers: {"host":"192.168.0.111:3001","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"5857ec81-8572-3193-6b5a-e226bbe3b9fd","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"g9zbkT3QQyP6aEcEn","data":{"goods":[{"id":2,"img":"http://23233.png","name":"m416射手步枪","skin_name":"无敌2","discrable":"久经战场","exchange_price":500}]}}
+[2019-03-05T18:10:01.619] [INFO] lotteryApp - [2019-03-05 18:10:01] [::ffff:192.168.0.111] [GET] [/api/goods/goodsModel/1] [200] [22ms]
+                Request Id: BoGmqHLppoZ7a2UDn
+                Request Headers: {"host":"192.168.0.111:3001","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"d8960860-fbe0-340d-5601-491a3ed9b4a0","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"BoGmqHLppoZ7a2UDn","data":{"goods":[{"id":1,"img":"http://dsdsd.png","name":"awm狙击枪","skin_name":"无损","discrable":"久经战场","exchange_price":101},{"id":3,"img":"http://23233.png","name":"awm狙击枪","skin_name":"有损","discrable":"久经战场","exchange_price":400}]}}
+[2019-03-05T18:11:29.195] [INFO] lotteryApp - [2019-03-05 18:11:29] [::ffff:192.168.0.111] [GET] [/api/goods/goodsTypesList] [200] [27ms]
+                Request Id: G31GLS5MMmrPOjUnV
+                Request Headers: {"host":"192.168.0.111:3001","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"cd129bf7-042d-298c-019c-b5d1f4b0986f","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"G31GLS5MMmrPOjUnV","data":{"goodsTypes":[{"id":1,"name":"手枪","GoodsModels":[{"id":1,"name":"awm"},{"id":2,"name":"m416"}]},{"id":2,"name":"手套","GoodsModels":[{"id":3,"name":"摩托车手套"}]}]}}
+[2019-03-05T18:12:48.234] [INFO] lotteryApp - [2019-03-05 18:12:48] [::ffff:192.168.0.111] [GET] [/api/goods/goodsTypesList] [200] [28ms]
+                Request Id: 2YbkDhWMMQlBD9S4G
+                Request Headers: {"host":"192.168.0.111:3001","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"eb788915-3441-105e-b202-5b52308fcd91","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"2YbkDhWMMQlBD9S4G","data":{"goodsTypes":[{"id":1,"name":"手枪","GoodsModels":[{"id":1,"name":"awm"},{"id":2,"name":"m416"}]},{"id":2,"name":"手套","GoodsModels":[{"id":3,"name":"摩托车手套"}]}]}}
+[2019-03-05T18:12:54.878] [INFO] lotteryApp - [2019-03-05 18:12:54] [::ffff:192.168.0.111] [GET] [/api/goods/goodsModel/1] [510] [35ms]
+                Request Id: NDYw8HYggEDGDdiPB
+                Request Headers: {"host":"192.168.0.111:3001","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"112127fe-146c-a1c8-b593-b77b14b75db7","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"NDYw8HYggEDGDdiPB","message":"Unknown column 'price' in 'field list'"}
+[2019-03-05T18:12:59.108] [INFO] lotteryApp - [2019-03-05 18:12:59] [::ffff:192.168.0.111] [GET] [/api/goods/goodsModel/1] [510] [18ms]
+                Request Id: PDYrdHQKK8oo14ILL
+                Request Headers: {"host":"192.168.0.111:3001","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"1cea96ea-5065-f370-dc13-063619d3fe52","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"PDYrdHQKK8oo14ILL","message":"Unknown column 'price' in 'field list'"}
+[2019-03-05T18:14:27.233] [INFO] lotteryApp - [2019-03-05 18:14:27] [::ffff:192.168.0.111] [GET] [/api/goods/goodsModel/1] [200] [31ms]
+                Request Id: BoGzjhLppoAYVpHVO
+                Request Headers: {"host":"192.168.0.111:3001","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"e57e68b0-fa2f-3837-5477-43221c67ae22","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"BoGzjhLppoAYVpHVO","data":{"goods":[{"id":1,"img":"http://dsdsd.png","name":"awm狙击枪","skin_name":"无损","discrable":"久经战场","draw_price":5},{"id":3,"img":"http://23233.png","name":"awm狙击枪","skin_name":"有损","discrable":"久经战场","draw_price":5}]}}
+[2019-03-05T18:16:36.723] [INFO] lotteryApp - [2019-03-05 18:16:36] [::ffff:192.168.0.111] [GET] [/api/goods/goodsModel/1] [510] [69ms]
+                Request Id: nazbosNzzaykZWTP8
+                Request Headers: {"host":"192.168.0.111:3001","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"ad4c0336-4aa3-e2f7-4ab7-b68f6cfbe2dd","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"nazbosNzzaykZWTP8","message":"Unknown column 'price' in 'field list'"}
+[2019-03-05T18:16:37.632] [INFO] lotteryApp - [2019-03-05 18:16:37] [::ffff:192.168.0.111] [GET] [/api/goods/goodsModel/1] [510] [9ms]
+                Request Id: MoQAYIg44r16k6iKb
+                Request Headers: {"host":"192.168.0.111:3001","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"bcb32a70-e9f9-2830-0dc4-9a9a1d992f14","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"MoQAYIg44r16k6iKb","message":"Unknown column 'price' in 'field list'"}
+[2019-03-05T18:17:59.596] [INFO] lotteryApp - [2019-03-05 18:17:59] [::ffff:192.168.0.111] [GET] [/api/goods/goodsModel/1] [200] [36ms]
+                Request Id: VQG2Vskoo4OEa9Hz4
+                Request Headers: {"host":"192.168.0.111:3001","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"f72c6913-785a-b26b-37ae-ce634c2fa3ce","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"VQG2Vskoo4OEa9Hz4","data":{"goods":[{"id":1,"img":"http://dsdsd.png","name":"awm狙击枪","skin_name":"无损","discrable":"久经战场","price":20},{"id":3,"img":"http://23233.png","name":"awm狙击枪","skin_name":"有损","discrable":"久经战场","price":null}]}}
+[2019-03-05T18:19:10.406] [INFO] lotteryApp - [2019-03-05 18:19:10] [::ffff:192.168.0.111] [GET] [/api/goods/goodsModel/1] [200] [29ms]
+                Request Id: 9LP4vSqddQQE3ruRv
+                Request Headers: {"host":"192.168.0.111:3001","cache-control":"no-cache","content-type":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36","postman-token":"d22129c3-a371-991f-ad7e-0a283388487d","accept":"*/*","accept-encoding":"gzip, deflate","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7"}
+                Request Query: {}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"9LP4vSqddQQE3ruRv","data":{"goods":[{"id":1,"img":"http://dsdsd.png","name":"awm狙击枪","skin_name":"无损","discrable":"久经战场","price":20},{"id":3,"img":"http://23233.png","name":"awm狙击枪","skin_name":"有损","discrable":"久经战场","price":200}]}}

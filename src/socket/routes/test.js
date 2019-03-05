@@ -1,6 +1,6 @@
-import captcha from '../../controllers/captcha'
-import { wrapIoRoute } from '../../utils/wrapIoRoute'
+// import captcha from '../../controllers/captcha'
+// import { wrapIoRoute } from '../../utils/wrapIoRoute'
 
-module.exports = {
-  "newMessage": wrapIoRoute(captcha.test)
-}
+// module.exports = {
+//   "newMessage": wrapIoRoute(captcha.test)
+// }

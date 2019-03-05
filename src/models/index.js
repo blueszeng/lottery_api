@@ -36,6 +36,7 @@ async function initCreateDb(sequelize) {
 
 function associate(models) {
     for (let modelName in models) {
+        console.log(models[modelName].associate)
         if (models[modelName].associate) {
             models[modelName].associate(models)
         }

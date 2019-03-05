@@ -20,6 +20,10 @@ const allowPassPathAndMethod = (path, method) => {
         { path: '/api/bet/playerBet', method: 'POST' },
         { path: '/api/wechat/pay', method: 'POST' },
         { path: '/api/box/:boxId', method: 'GET' },
+        { path: '/api/goods/exchangeList', method: 'GET' },
+        { path: '/api/goods/goodsTypesList', method: 'GET' },
+        { path: '/api/goods/goodsModel/:model', method: 'GET' },
+
     ]
     let isAllowed = false
     for (let allowedPathMethod of allowedPathMethods) {

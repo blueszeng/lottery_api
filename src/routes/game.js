@@ -5,7 +5,7 @@ const router = Router({
     prefix: '/game'
 })
 
-router.post('/', wrapRoute(game.gameList))
-router.post('/boxlist', wrapRoute(game.getGameBoxList))
+router.get('/', wrapRoute(game.gameList))
+router.get('/boxlist', wrapRoute(game.getGameBoxList))
 
 module.exports = router

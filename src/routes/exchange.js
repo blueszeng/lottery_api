@@ -1,10 +1,10 @@
 import Router from 'koa-router'
-import box from '../controllers/box'
+import exchange from '../controllers/exchange'
 import { wrapRoute } from '../utils/wrapRoute'
 const router = Router({
-    prefix: '/box'
+    prefix: '/exchange'
 })
 
-router.get('/:boxId', wrapRoute(box.getBox))
+router.get('/', wrapRoute(exchange.exChangeGoods))
 
 module.exports = router

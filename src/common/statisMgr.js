@@ -16,9 +16,7 @@ const initStatis = async(models) => {
         where: { type: 1 }
     })
     statistics.openBoxNum = openBoxNum
-    let userNum = await models.User.count({
-        where: { type: 1 }
-    })
+    let userNum = await models.User.count({})
     statistics.userNum = userNum
 }
 

@@ -4,15 +4,20 @@ import Router from 'koa-router'
 
 const basename = path.basename(module.filename)
 const router = Router({
-  prefix: '/api'
+    prefix: '/api'
 })
 
 fs.readdirSync(__dirname).forEach((file) => {
-  if (!/\.js$/.test(file) || file === basename) {
-    return
-  }
-  let route = require(path.join(__dirname, file))
-  router.use(route.routes(), route.allowedMethods())
+    if (!/\.js$/.test(file) || file === basename) {
+        return
+    }
+    let route = require(path.join(__dirname, file))
+    router.use(route.routes(), route.allowedMethods())
 })
+
+
+// sellgoods
+// lucky/luckyrange
+
 
 export default router
