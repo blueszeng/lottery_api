@@ -4,15 +4,11 @@ import { Joi, validate } from '../utils/validator'
  * 获取游戏列表
  */
 const gameList = async(ctx, next) => {
-    let game = await models.Game.findAll()
-    let retGame = []
-    for (let i in game) {
-        retGame[i].push({
-            type: game['id'],
-            name: game['name']
-        })
-    }
-    return Promise.resolve(retGame)
+    let game = await models.Game.findAll({
+        attributes: ['id', 'name'],
+        where: { show: true }
+    })
+    return Promise.resolve(game)
 }
 
 /**
@@ -40,7 +36,7 @@ const getGameBoxList = async(ctx, next) => {
             where: { game_id: gameId },
             include: [{
                 model: models.Box,
-                attributes: ['id', 'icon', 'name', 'pirce', 'open'],
+                attributes: ['id', 'img', 'name', 'pirce', 'open'],
                 where: { show: 1 },
             }]
         })

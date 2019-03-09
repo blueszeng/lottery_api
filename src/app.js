@@ -8,11 +8,13 @@ import logger from 'koa-logger'
 import bodyParser from 'koa-bodyparser'
 import koaRedis from 'koa-redis'
 
+
 import config from './configs/config'
 import router from './routes'
 import middlewares from './middlewares'
 import crypto from './utils/crypto'
 import ioRoute from './socket/routes'
+import swagger from './swagger'
 
 const redisStore = koaRedis({
     url: config.redisUrl
@@ -21,13 +23,19 @@ const app = new Koa()
 app.use(convert(cors()))
 app.keys = [config.secretKeyBase]
 if (config.serveStatic) {
-    app.use(convert(require('koa-static')(path.join(__dirname, './public'))))
+    app.use(convert(require('koa-static')(path.join(__dirname, './public/'))))
 }
+
 app.use(convert(session({
     store: redisStore,
     prefix: 'boss:sess:',
     key: 'boss.sid'
 })))
+
+
+
+
+swagger(app)
 
 app.use(bodyParser())
 

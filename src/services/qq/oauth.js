@@ -51,3 +51,5 @@ const getQQProfile = async(access_token, openid) => {
         return Promise.reject(`获取QQProfile${err.message}`)
     }
 }
+
+export default { getOpenid }

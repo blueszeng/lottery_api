@@ -10,11 +10,6 @@ import crypto from '../utils/crypto'
 import debug from '../utils/debug'
 const log = debug(__filename)
 
-// let s = await crypto.encryptCipher("232233332")
-// console.log('sdsd', global.io.eio.clients) //连接数
-// console.log('sdsd', global.io.eio.clientsCount) //连接数
-// global.io.sockets.emit("test", s)
-//密码登陆
 const loginLocal = async(ctx, next) => {
     const body = ctx.request.body
     body.email = body.accounts
@@ -50,7 +45,7 @@ const loginLocal = async(ctx, next) => {
         ctx.session.userId = user.id
         log('log in successfully!')
         const token = createToken(user.id, ctx.headers['user-agent'], rememberMe ? 7 : 1)
-        ctx.response.set('x-lottery-app-token', token)
+        ctx.response.set('X-lottery-app-token', token)
         return Promise.resolve(user)
     } else {
         console.log('user name or password error.')
@@ -58,16 +53,18 @@ const loginLocal = async(ctx, next) => {
     }
 }
 
+
 // QQ登陆
 const loginQQ = async(ctx, next) => {
     const validSchema = Joi.object().keys({
         code: Joi.string().length(32).required().label('qq身份验证代码')
     })
-    const { code } = await validate(ctx.request.body, validSchema)
+
+    const { code } = await validate(ctx.request.query, validSchema)
     const openid = await qq.getOpenid(code)
     const userProfile = await loginOrRegisterQQ(openid)
     const token = createToken(userProfile.id, ctx.headers['user-agent'], 1)
-    ctx.response.set('x-lottery-app-token', token)
+    ctx.response.set('X-lottery-app-token', token)
     return Promise.resolve(userProfile)
 }
 

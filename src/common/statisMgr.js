@@ -38,7 +38,7 @@ const getLoginBoxAwardMsg = () => {
  * 设置用户在线数量
  */
 const setUserNum = (num, isSet = false) => {
-    if (isSet === True) {
+    if (isSet === true) {
         statistics.userNum = num
         return
     }
@@ -49,7 +49,7 @@ const setUserNum = (num, isSet = false) => {
  * 设置用户打开宝箱数量
  */
 const setOpenBoxNum = (num, isSet = false) => {
-    if (isSet === True) {
+    if (isSet === true) {
         statistics.openBoxNum = num
         return
     }

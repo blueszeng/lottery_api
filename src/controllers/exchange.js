@@ -2,8 +2,9 @@ import models from '../models/index'
 import { Joi, validate } from '../utils/validator'
 
 import debug from '../utils/debug'
+import statisMgr from '../common/statisMgr'
 const log = debug('goods=>')
-
+import { OPEN_BOX } from '../utils/const'
 /**
  * 兑换物品
  */
@@ -20,22 +21,22 @@ const exChangeGoods = async(ctx, next) => {
     }
     try {
         let goods = await models.Goods.findOne({
-            attributes: ['exchange_price', 'name', 'skin_name', 'img'],
-            where: { goods_id: query.goodsId }
+            attributes: ['exchange_price', 'name', 'skin_name', 'img', 'goods_qualities_id'],
+            where: { id: query.goodsId }
         })
-        const userId = ctx.state.userId
-        let user = await models.User.findOne({ // 查找用户信息
-            attributes: ['exchange_money', 'name', 'head'],
-            where: { id: userId }
-        })
-        dollar_money = user.dollar_money
-        if (dollar_money < goods.exchange_price) {
+        let userId = ctx.state.userId
+        userId = 1
+        let user = await models.User.findById(userId)
+        let exchange_money = user.exchange_money
+        if (exchange_money < goods.exchange_price) {
             return Promise.reject('兑换币不足')
         }
-        exchange_money -= money
+        exchange_money -= goods.exchange_price
+        console.log(exchange_money)
         await user.update({ // 更新金币
             exchange_money
         })
+        console.log('fuckckckc')
         let userGoods = await models.UserGoods.findOne({ where: { goods_id: query.goodsId } })
         if (userGoods) { //加物品
             userGoods.increment('goods_num', { by: 1 })
@@ -47,19 +48,25 @@ const exChangeGoods = async(ctx, next) => {
                 goods_num: 1
             })
         }
-        let goodsModel = await models.GoodsModel.findOne({
-            attributes: ['img'],
-            where: { id: goodsId }
-        })
+        let goodsQualitie = await models.GoodsQualities.findOne({
+                attributes: ['img'],
+                where: { id: goods.goods_qualities_id }
+            })
+            // 保存兑换记录
+        await models.WinPrizePush.create({ uid: userId, type: OPEN_BOX, goods_id: query.goodsId })
+        let retAward = []
         retAward.push({ // 保存中奖推送消息
-            img: goods.img,
-            name: goods.name,
-            goodsId: goodsId,
-            goodsModel: goodsModel.img,
-            uid: userId,
-            uName: user.name,
-            uHead: user.head
-        })
+                img: goods.img,
+                name: goods.name,
+                goodsId: query.goodsId,
+                goodsQualitie: goodsQualitie.img,
+                uid: userId,
+                uName: user.name,
+                uHead: user.head
+            })
+            //添加统计数据
+        statisMgr.addBoxAwardMsg(retAward)
+        statisMgr.setOpenBoxNum(retAward.length)
 
         return Promise.resolve({
             goods

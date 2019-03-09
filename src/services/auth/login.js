@@ -6,7 +6,7 @@ import lottery from '../../common/lottery'
 import MysqlError from '../../utils/error/MysqlError'
 import wechat from '../../services/wechat/oauth'
 import qq from '../../services/wechat/oauth'
-
+const SECRETKEY = "23233"
 const createToken = (userId, userAgent, days) => {
     return jwt.sign({
         userId,

@@ -11,10 +11,10 @@ export default (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             comment: "宝箱类型ID",
         },
-        icon: {
+        img: {
             notEmpty: true,
             type: DataTypes.STRING,
-            comment: "宝箱icon",
+            comment: "宝箱img",
         },
         name: {
             notEmpty: true,

@@ -20,7 +20,7 @@ const xmlToJson = (items) => {
     })
 }
 const random = (num1, num2) => {
-    Math.floor((Math.random() * num2) + num1);
+    return Math.floor((Math.random() * num2) + num1)
 }
 export default {
     xmlToJson,

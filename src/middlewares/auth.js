@@ -16,14 +16,20 @@ const setUnauthrization = (ctx) => {
 const allowPassPathAndMethod = (path, method) => {
     const allowedPathMethods = [
         { path: '/api/auth/loginLocal', method: 'POST' },
-        { path: '/api/auth/loginWechat', method: 'POST' },
+        { path: '/api/auth/loginQQ', method: 'GET' },
         { path: '/api/bet/playerBet', method: 'POST' },
         { path: '/api/wechat/pay', method: 'POST' },
         { path: '/api/box/:boxId', method: 'GET' },
+        { path: '/api/exchange', method: 'GET' },
+        { path: '/api/game', method: 'GET' },
+        { path: '/api/game/boxlist', method: 'GET' },
+        { path: '/api/lottery/openBox', method: 'GET' },
+        { path: '/api/lottery/luckyRange', method: 'GET' },
+        { path: '/api/lottery/luckyLottery', method: 'POST' },
         { path: '/api/goods/exchangeList', method: 'GET' },
         { path: '/api/goods/goodsTypesList', method: 'GET' },
         { path: '/api/goods/goodsModel/:model', method: 'GET' },
-
+        { path: '/api-docs', method: 'GET' },
     ]
     let isAllowed = false
     for (let allowedPathMethod of allowedPathMethods) {
@@ -56,7 +62,7 @@ export default async(ctx, next) => {
                         // 判断是否需要续期TOKEN
                     if (user.renewTime < moment().unix()) {
                         const newToken = createToken(user.userId, userAgent, user.days)
-                        ctx.response.set('x-lottery-app-token', newToken)
+                        ctx.response.set('X-lottery-app-token', newToken)
                     }
                 }
             } catch (err) {
