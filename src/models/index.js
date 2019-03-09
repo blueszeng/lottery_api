@@ -26,6 +26,7 @@ fs.readdirSync(__dirname).forEach((file) => {
 })
 async function initCreateDb(sequelize) {
     try {
+        console.log('cmdmdmddmmd')
         await sequelize.sync({ force: false })
         await statisMgr.initStatis(db)
         log('init createDb successed')
