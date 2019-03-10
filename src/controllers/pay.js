@@ -1,5 +1,6 @@
 import models from '../models/index'
 import { Joi, validate } from '../utils/validator'
+import util from '../utils/util'
 import { createQrderPay } from '../services/alipay/api'
 
 
@@ -28,7 +29,7 @@ const alipayCreateOrder = async(ctx, next) => {
         const userId = ctx.state.userId
         const data = {
             userId: userId,
-            sdcustomno: moment().valueOf(),
+            sdcustomno: util.generateOrderNo(),
             money: body.money,
             dollar_money: dollar_money,
             state: 0

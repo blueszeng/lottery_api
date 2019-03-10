@@ -29,6 +29,10 @@ const allowPassPathAndMethod = (path, method) => {
         { path: '/api/goods/exchangeList', method: 'GET' },
         { path: '/api/goods/goodsTypesList', method: 'GET' },
         { path: '/api/goods/goodsModel/:model', method: 'GET' },
+        { path: '/api/user/giveGoods', method: 'GET' },
+        { path: '/api/user/exChangeOutGoods', method: 'GET' },
+        { path: '/api/user/decomposeGoods', method: 'GET' },
+        { path: '/api/user/records', method: 'GET' },
         { path: '/api-docs', method: 'GET' },
     ]
     let isAllowed = false

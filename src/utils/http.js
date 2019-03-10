@@ -1,9 +1,12 @@
 import fetch from 'node-fetch'
 import qs from 'querystring'
 
-var get = async(url, data) => {
-    var param = qs.stringify(data);
-    var options = {
+
+
+
+const get = async(url, data) => {
+    let param = qs.stringify(data);
+    let options = {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' }
     };
@@ -18,8 +21,8 @@ var get = async(url, data) => {
     return Promise.resolve(jsonValue);
 };
 
-var post = async function(url, data) {
-    var options = {
+const post = async(url, data) => {
+    let options = {
         method: 'POST',
         body: JSON.stringify(data),
         headers: { 'Content-Type': 'application/json' }

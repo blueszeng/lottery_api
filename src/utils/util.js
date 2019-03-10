@@ -1,4 +1,12 @@
 import { to_json } from 'xmljson'
+
+import moment from 'moment'
+
+
+const generateOrderNo = () => {
+    return moment().format('YYYYMMDDHHmmss') + random(1000, 9999)
+}
+
 const xmlToJson = (items) => {
     return new Promise((resolve, reject) => {
         let values = {}
@@ -24,5 +32,6 @@ const random = (num1, num2) => {
 }
 export default {
     xmlToJson,
-    random
+    random,
+    generateOrderNo
 }

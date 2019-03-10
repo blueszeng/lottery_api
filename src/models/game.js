@@ -11,10 +11,17 @@ export default (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             comment: "名称",
         },
-        icon: {
+        img: {
             notEmpty: true,
             type: DataTypes.STRING,
-            comment: "游戏icon",
+            comment: "游戏图片",
+        },
+        config: {
+            type: DataTypes.BOOLEAN,
+            validate: {
+                notEmpty: true
+            },
+            comment: "区配置",
         },
         show: {
             type: DataTypes.BOOLEAN,
