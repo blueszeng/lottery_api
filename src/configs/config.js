@@ -21,7 +21,7 @@ const defaultConfig = {
     wechatNotifyUrl: 'http://wechat.deerwar.com/api/common/wechat/pay',
     qqAppid: 'ID1108166739',
     qqApiKey: 'LKQ8wMCUYqaUDaLG',
-    QQRedirect_uri: "http://localhost://2332xx.xx.xx",
+    QQRedirect_uri: "http://swxhm.jdy518.com/api/auth/loginQQ",
 }
 
 const config = _.merge(defaultConfig, configs[env])

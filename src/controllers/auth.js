@@ -56,10 +56,10 @@ const loginLocal = async(ctx, next) => {
 
 // QQ登陆
 const loginQQ = async(ctx, next) => {
+    console.log(ctx.request.query)
     const validSchema = Joi.object().keys({
         code: Joi.string().length(32).required().label('qq身份验证代码')
     })
-
     const { code } = await validate(ctx.request.query, validSchema)
     const openid = await qq.getOpenid(code)
     const userProfile = await loginOrRegisterQQ(openid)

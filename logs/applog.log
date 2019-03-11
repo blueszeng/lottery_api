@@ -4177,3 +4177,31 @@
                 Request Body: {}
                 Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
                 Response Body: {"reqId":"bNDWfWE24r5pyUPA","data":[]}
+[2019-03-11T11:21:06.598] [INFO] lotteryApp - [2019-03-11 11:21:06] [::ffff:127.0.0.1] [GET] [/api/lottery/openBox] [510] [111ms]
+                Request Id: dyYziz7Wq5EDvtgk
+                Request Headers: {"host":"127.0.0.1:3001","connection":"keep-alive","accept":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36","referer":"http://127.0.0.1:3001/swagger","accept-encoding":"gzip, deflate, br","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7","cookie":"_ga=GA1.1.1301984627.1507365060; Huiskin=default; pgv_pvid=6215925555; __qc__k=TC_MK=3FA05FBDDE384D1ACA568F4AA4DFB0D4; boss.sid.sig=tokiRh0FzIM49krdC8pxvJ2b8zQ"}
+                Request Query: {"boxId":"1","num":"1"}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"dyYziz7Wq5EDvtgk","message":"无法执行所需的请求"}
+[2019-03-11T11:22:46.638] [INFO] lotteryApp - [2019-03-11 11:22:46] [::ffff:127.0.0.1] [GET] [/api/lottery/openBox] [200] [451ms]
+                Request Id: 1X6zINWQqyVvPiYE
+                Request Headers: {"host":"127.0.0.1:3001","connection":"keep-alive","accept":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36","referer":"http://127.0.0.1:3001/swagger","accept-encoding":"gzip, deflate, br","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7","cookie":"_ga=GA1.1.1301984627.1507365060; Huiskin=default; pgv_pvid=6215925555; __qc__k=TC_MK=3FA05FBDDE384D1ACA568F4AA4DFB0D4; boss.sid.sig=tokiRh0FzIM49krdC8pxvJ2b8zQ"}
+                Request Query: {"boxId":"1","num":"1"}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"1X6zINWQqyVvPiYE","data":[{"img":"http://23233.png","name":"m416射手步枪","id":2,"goods_qualities_id":1}]}
+[2019-03-11T11:27:31.249] [INFO] lotteryApp - [2019-03-11 11:27:30] [::ffff:127.0.0.1] [GET] [/api/lottery/openBox] [200] [506ms]
+                Request Id: 5ZWyH1v2QdX2Qtyr
+                Request Headers: {"host":"127.0.0.1:3001","connection":"keep-alive","accept":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36","referer":"http://127.0.0.1:3001/swagger","accept-encoding":"gzip, deflate, br","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7","cookie":"_ga=GA1.1.1301984627.1507365060; Huiskin=default; pgv_pvid=6215925555; __qc__k=TC_MK=3FA05FBDDE384D1ACA568F4AA4DFB0D4; boss.sid.sig=tokiRh0FzIM49krdC8pxvJ2b8zQ"}
+                Request Query: {"boxId":"1","num":"1"}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"5ZWyH1v2QdX2Qtyr","data":[{"img":"http://dsdsd.png","name":"awm狙击枪","id":1,"goods_qualities_id":1}]}
+[2019-03-11T11:29:07.975] [INFO] lotteryApp - [2019-03-11 11:29:07] [::ffff:127.0.0.1] [GET] [/api/lottery/openBox] [200] [453ms]
+                Request Id: oKDvFd2Ej9AE5uyN
+                Request Headers: {"host":"127.0.0.1:3001","connection":"keep-alive","accept":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36","referer":"http://127.0.0.1:3001/swagger","accept-encoding":"gzip, deflate, br","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7","cookie":"_ga=GA1.1.1301984627.1507365060; Huiskin=default; pgv_pvid=6215925555; __qc__k=TC_MK=3FA05FBDDE384D1ACA568F4AA4DFB0D4; boss.sid.sig=tokiRh0FzIM49krdC8pxvJ2b8zQ"}
+                Request Query: {"boxId":"1","num":"1"}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"oKDvFd2Ej9AE5uyN","data":[{"img":"http://23233.png","name":"m416射手步枪","id":2,"goods_qualities_id":1}]}

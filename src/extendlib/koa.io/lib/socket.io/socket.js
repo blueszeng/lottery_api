@@ -34,7 +34,6 @@ var res = {
 
 function Socket(nsp, client) {
     if (!(this instanceof Socket)) return new Socket(nsp, client);
-    console.log("sdddssdsdsdsdsd")
     this.socket = new OriginalSocket(nsp, client);
     this.cookies = new Cookies(this.socket.request, res, nsp.server.keys);
 }
