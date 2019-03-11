@@ -21,7 +21,10 @@ const getOpenid = async(code) => {
             redirect_uri: config.QQRedirect_uri,
             code: code
         }
+
+        // console.log(args)
         let ret = await http.get(URL.QQ_Get_Access_Token, args) // 获取access_token
+        console.log('cmdmdmdmdmd', ret)
         args = {
             access_token: 'authorization_code',
         }

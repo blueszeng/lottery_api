@@ -4205,3 +4205,80 @@
                 Request Body: {}
                 Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
                 Response Body: {"reqId":"oKDvFd2Ej9AE5uyN","data":[{"img":"http://23233.png","name":"m416射手步枪","id":2,"goods_qualities_id":1}]}
+[2019-03-11T18:15:44.478] [INFO] lotteryApp - [2019-03-11 18:15:44] [::ffff:127.0.0.1] [GET] [/api/auth/loginQQ] [510] [109ms]
+                Request Id: G3Zv4T5MQjgKV7C2p
+                Request Headers: {"host":"127.0.0.1:3001","connection":"keep-alive","accept":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36","referer":"http://127.0.0.1:3001/swagger","accept-encoding":"gzip, deflate, br","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7","cookie":"_ga=GA1.1.1301984627.1507365060; Huiskin=default; pgv_pvid=6215925555; __qc_wId=872; __qc__k=TC_MK=3304D7C464961BC62A74FBF95C5FFE23"}
+                Request Query: {"code":"9468B6A932201EEE4230271EAFD8A2A1"}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"G3Zv4T5MQjgKV7C2p","message":"获取openIdinvalid json response body at https://graph.qq.com/oauth2.0/token?grant_type=authorization_code&client_id=ID1108166739&client_secret=LKQ8wMCUYqaUDaLG&redirect_uri=http%3A%2F%2Fswxhm.jdy518.com%2Fapi%2Fauth%2FloginQQ&code=9468B6A932201EEE4230271EAFD8A2A1 reason: Unexpected token c in JSON at position 0"}
+[2019-03-11T18:16:55.983] [INFO] lotteryApp - [2019-03-11 18:16:55] [::ffff:127.0.0.1] [GET] [/api/auth/loginQQ] [510] [337ms]
+                Request Id: qG7aBiLpbRkp1ACYE
+                Request Headers: {"host":"127.0.0.1:3001","connection":"keep-alive","accept":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36","referer":"http://127.0.0.1:3001/swagger","accept-encoding":"gzip, deflate, br","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7","cookie":"_ga=GA1.1.1301984627.1507365060; Huiskin=default; pgv_pvid=6215925555; __qc_wId=872; __qc__k=TC_MK=3304D7C464961BC62A74FBF95C5FFE23"}
+                Request Query: {"code":"9468B6A932201EEE4230271EAFD8A2A1"}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"qG7aBiLpbRkp1ACYE","message":"获取openIdinvalid json response body at https://graph.qq.com/oauth2.0/token?grant_type=authorization_code&client_id=ID1108166739&client_secret=LKQ8wMCUYqaUDaLG&redirect_uri=http%3A%2F%2Fswxhm.jdy518.com%2Fapi%2Fauth%2FloginQQ&code=9468B6A932201EEE4230271EAFD8A2A1 reason: Unexpected token c in JSON at position 0"}
+[2019-03-11T18:18:03.559] [INFO] lotteryApp - [2019-03-11 18:18:03] [::ffff:127.0.0.1] [GET] [/api/auth/loginQQ] [510] [394ms]
+                Request Id: ZOn8NH3dK4947mcBQ
+                Request Headers: {"host":"127.0.0.1:3001","connection":"keep-alive","accept":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36","referer":"http://127.0.0.1:3001/swagger","accept-encoding":"gzip, deflate, br","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7","cookie":"_ga=GA1.1.1301984627.1507365060; Huiskin=default; pgv_pvid=6215925555; __qc_wId=872; __qc__k=TC_MK=3304D7C464961BC62A74FBF95C5FFE23"}
+                Request Query: {"code":"9468B6A932201EEE4230271EAFD8A2A1"}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"ZOn8NH3dK4947mcBQ","message":"获取openIdundefined"}
+[2019-03-11T18:19:27.411] [INFO] lotteryApp - [2019-03-11 18:19:27] [::ffff:127.0.0.1] [GET] [/api/auth/loginQQ] [510] [168ms]
+                Request Id: BoV17tLpGXk34VF1
+                Request Headers: {"host":"127.0.0.1:3001","connection":"keep-alive","accept":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36","referer":"http://127.0.0.1:3001/swagger","accept-encoding":"gzip, deflate, br","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7","cookie":"_ga=GA1.1.1301984627.1507365060; Huiskin=default; pgv_pvid=6215925555; __qc_wId=872; __qc__k=TC_MK=3304D7C464961BC62A74FBF95C5FFE23"}
+                Request Query: {"code":"9468B6A932201EEE4230271EAFD8A2A1"}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"BoV17tLpGXk34VF1","message":"获取openIdundefined"}
+[2019-03-11T18:19:28.427] [INFO] lotteryApp - [2019-03-11 18:19:28] [::ffff:127.0.0.1] [GET] [/api/auth/loginQQ] [510] [59ms]
+                Request Id: yop7ZtOAn484Byh8l
+                Request Headers: {"host":"127.0.0.1:3001","connection":"keep-alive","accept":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36","referer":"http://127.0.0.1:3001/swagger","accept-encoding":"gzip, deflate, br","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7","cookie":"_ga=GA1.1.1301984627.1507365060; Huiskin=default; pgv_pvid=6215925555; __qc_wId=872; __qc__k=TC_MK=3304D7C464961BC62A74FBF95C5FFE23"}
+                Request Query: {"code":"9468B6A932201EEE4230271EAFD8A2A1"}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"yop7ZtOAn484Byh8l","message":"获取openIdundefined"}
+[2019-03-11T18:20:40.236] [INFO] lotteryApp - [2019-03-11 18:20:39] [::ffff:127.0.0.1] [GET] [/api/auth/loginQQ] [510] [245ms]
+                Request Id: ZOBzpi3dK4dG7jsVP
+                Request Headers: {"host":"127.0.0.1:3001","connection":"keep-alive","accept":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36","referer":"http://127.0.0.1:3001/swagger","accept-encoding":"gzip, deflate, br","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7","cookie":"_ga=GA1.1.1301984627.1507365060; Huiskin=default; pgv_pvid=6215925555; __qc_wId=872; __qc__k=TC_MK=3304D7C464961BC62A74FBF95C5FFE23"}
+                Request Query: {"code":"9468B6A932201EEE4230271EAFD8A2A1"}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"ZOBzpi3dK4dG7jsVP","message":"获取openIdundefined"}
+[2019-03-11T18:22:04.409] [INFO] lotteryApp - [2019-03-11 18:22:04] [::ffff:127.0.0.1] [GET] [/api/auth/loginQQ] [510] [263ms]
+                Request Id: EDoDZtZ9oBWyVZTGy
+                Request Headers: {"host":"127.0.0.1:3001","connection":"keep-alive","accept":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36","referer":"http://127.0.0.1:3001/swagger","accept-encoding":"gzip, deflate, br","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7","cookie":"_ga=GA1.1.1301984627.1507365060; Huiskin=default; pgv_pvid=6215925555; __qc_wId=872; __qc__k=TC_MK=3304D7C464961BC62A74FBF95C5FFE23"}
+                Request Query: {"code":"9468B6A932201EEE4230271EAFD8A2A1"}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"EDoDZtZ9oBWyVZTGy","message":"获取openIdundefined"}
+[2019-03-11T18:24:24.515] [INFO] lotteryApp - [2019-03-11 18:24:24] [::ffff:127.0.0.1] [GET] [/api/auth/loginQQ] [510] [92ms]
+                Request Id: k6q6yTPB6b68mjiqG
+                Request Headers: {"host":"127.0.0.1:3001","connection":"keep-alive","accept":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36","referer":"http://127.0.0.1:3001/swagger","accept-encoding":"gzip, deflate, br","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7","cookie":"_ga=GA1.1.1301984627.1507365060; Huiskin=default; pgv_pvid=6215925555; __qc_wId=872; __qc__k=TC_MK=3304D7C464961BC62A74FBF95C5FFE23"}
+                Request Query: {"code":"9468B6A932201EEE4230271EAFD8A2A1"}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"k6q6yTPB6b68mjiqG","message":"获取openIdundefined"}
+[2019-03-11T18:27:30.131] [INFO] lotteryApp - [2019-03-11 18:27:28] [::ffff:127.0.0.1] [GET] [/api/auth/loginQQ] [510] [1566ms]
+                Request Id: g9nnKc3QN9XpkVS6D
+                Request Headers: {"host":"127.0.0.1:3001","connection":"keep-alive","accept":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36","referer":"http://127.0.0.1:3001/swagger","accept-encoding":"gzip, deflate, br","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7","cookie":"_ga=GA1.1.1301984627.1507365060; Huiskin=default; pgv_pvid=6215925555; __qc_wId=872; __qc__k=TC_MK=3304D7C464961BC62A74FBF95C5FFE23"}
+                Request Query: {"code":"9468B6A932201EEE4230271EAFD8A2A1"}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"g9nnKc3QN9XpkVS6D","message":"获取openIdundefined"}
+[2019-03-11T18:27:57.829] [INFO] lotteryApp - [2019-03-11 18:27:57] [::ffff:127.0.0.1] [GET] [/api/auth/loginQQ] [510] [262ms]
+                Request Id: yoWWPIOAn4MdZqtXZ
+                Request Headers: {"host":"127.0.0.1:3001","connection":"keep-alive","accept":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36","referer":"http://127.0.0.1:3001/swagger","accept-encoding":"gzip, deflate, br","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7","cookie":"_ga=GA1.1.1301984627.1507365060; Huiskin=default; pgv_pvid=6215925555; __qc_wId=872; __qc__k=TC_MK=3304D7C464961BC62A74FBF95C5FFE23"}
+                Request Query: {"code":"9468B6A932201EEE4230271EAFD8A2A1"}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"yoWWPIOAn4MdZqtXZ","message":"获取openIdundefined"}
+[2019-03-11T18:30:12.674] [INFO] lotteryApp - [2019-03-11 18:30:12] [::ffff:127.0.0.1] [GET] [/api/auth/loginQQ] [510] [162ms]
+                Request Id: PDoo9SQKdq353ECEm
+                Request Headers: {"host":"127.0.0.1:3001","connection":"keep-alive","accept":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36","referer":"http://127.0.0.1:3001/swagger","accept-encoding":"gzip, deflate, br","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7","cookie":"_ga=GA1.1.1301984627.1507365060; Huiskin=default; pgv_pvid=6215925555; __qc_wId=872; __qc__k=TC_MK=3304D7C464961BC62A74FBF95C5FFE23"}
+                Request Query: {"code":"99BDD5E83CD3BBCF887400B347742686"}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"PDoo9SQKdq353ECEm","message":"获取openIdundefined"}

@@ -19,8 +19,8 @@ const defaultConfig = {
     wechatMchid: '1346625101',
     wechatPayApiKey: 'deerwarwechat1234567891011121314',
     wechatNotifyUrl: 'http://wechat.deerwar.com/api/common/wechat/pay',
-    qqAppid: 'ID1108166739',
-    qqApiKey: 'LKQ8wMCUYqaUDaLG',
+    qqAppid: '101552475',
+    qqApiKey: 'a9f57aacde4a866d42d62318a33c4677',
     QQRedirect_uri: "http://swxhm.jdy518.com/api/auth/loginQQ",
 }
 

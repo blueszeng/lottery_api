@@ -13,12 +13,15 @@ const get = async(url, data) => {
     url = url + '?' + param;
     let jsonValue = null;
     try {
+        console.log('sddssd111', url, options)
         let value = await fetch(url, options)
-        jsonValue = value.json();
+        jsonValue = await value.json()
+        console.log('sddssd', jsonValue)
+        return Promise.resolve(jsonValue)
     } catch (err) {
+        console.log('sddssd22', err)
         return Promise.reject('problem with request: ' + err.message)
     }
-    return Promise.resolve(jsonValue);
 };
 
 const post = async(url, data) => {
@@ -30,11 +33,11 @@ const post = async(url, data) => {
     let jsonValue = null;
     try {
         let value = await fetch(url, options)
-        jsonValue = value.json();
+        jsonValue = await value.json()
+        return Promise.resolve(jsonValue)
     } catch (err) {
         return Promise.reject('problem with request: ' + err.message)
     }
-    return Promise.resolve(jsonValue);
 };
 
 export default {
