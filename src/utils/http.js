@@ -16,7 +16,8 @@ const get = async(url, data, isJson = true, isConver = false) => {
         if (isJson == true) {
             jsonValue = await value.json()
         } else if (isConver == true) {
-            let newstr = str.replace(/callback\(/, '')
+            let text = await value.text()
+            let newstr = text.replace(/callback\(/, '')
             newstr = newstr.replace(/\);/i, '')
             jsonValue = JSON.parse(jsonValue)
         } else {
