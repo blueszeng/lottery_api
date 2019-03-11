@@ -23,12 +23,12 @@ const getOpenid = async(code) => {
         }
 
         // console.log(args)
-        let ret = await http.get(URL.QQ_Get_Access_Token, args) // 获取access_token
+        let ret = await http.get(URL.QQ_Get_Access_Token, args, false) // 获取access_token
         console.log('cmdmdmdmdmd', ret)
         args = {
             access_token: ret.access_token,
         }
-        ret = await http.get(URL.QQ_Get_OpenID, args) // 获取openid
+        ret = await http.get(URL.QQ_Get_OpenID, args, false) // 获取openid
         return Promise.resolve(ret.openid)
     } catch (err) {
         return Promise.reject(`获取openId${err.message}`)

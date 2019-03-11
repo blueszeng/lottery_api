@@ -3,9 +3,8 @@ import qs from 'querystring'
 
 
 
-
-const get = async(url, data) => {
-    let param = qs.stringify(data);
+const get = async(url, data, isJson = true) => {
+    let param = qs.stringify(data)
     let options = {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' }
@@ -14,7 +13,12 @@ const get = async(url, data) => {
     let jsonValue = null;
     try {
         let value = await fetch(url, options)
-        jsonValue = await value.json()
+        if (isJson == true) {
+            jsonValue = await value.json()
+        } else {
+            text = await value.text()
+            jsonValue = qs.parse(text)
+        }
         console.log('sddssd', jsonValue)
         return Promise.resolve(jsonValue)
     } catch (err) {
