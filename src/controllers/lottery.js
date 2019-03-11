@@ -189,7 +189,7 @@ const openBox = async(ctx, next) => {
 
     let { pirce } = await models.Box.findOne({ // 查找宝盒价格
         attributes: ['pirce'],
-        where: { id: query.boxId, show: 1 }
+        where: { id: query.boxId, open: 1 }
     })
     const money = pirce * num
     const userId = ctx.state.userId || 1
