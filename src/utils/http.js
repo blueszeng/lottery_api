@@ -3,7 +3,7 @@ import qs from 'querystring'
 
 
 
-const get = async(url, data, isJson = true) => {
+const get = async(url, data, isJson = true, isConver = false) => {
     let param = qs.stringify(data)
     let options = {
         method: 'GET',
@@ -15,6 +15,10 @@ const get = async(url, data, isJson = true) => {
         let value = await fetch(url, options)
         if (isJson == true) {
             jsonValue = await value.json()
+        } else if (isConver == true) {
+            let newstr = str.replace(/callback\(/, '')
+            newstr = newstr.replace(/\);/i, '')
+            jsonValue = JSON.parse(jsonValue)
         } else {
             let text = await value.text()
             jsonValue = qs.parse(text)
