@@ -16,7 +16,7 @@ const get = async(url, data, isJson = true) => {
         if (isJson == true) {
             jsonValue = await value.json()
         } else {
-            text = await value.text()
+            let text = await value.text()
             jsonValue = qs.parse(text)
         }
         console.log('sddssd', jsonValue)
