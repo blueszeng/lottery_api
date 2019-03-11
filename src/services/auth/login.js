@@ -24,9 +24,9 @@ const createToken = (userId, userAgent, days) => {
 const registerQQ = async(openid, profile) => {
     // 开始保存事务
     await transaction(async(t) => {
-        let user = await models.User.create({ head: profile.headurl, name: profile.nickname, dollar_money: 0, exchange_money: 0 }, { transaction: t })
+        let user = await models.User.create({ head: profile.figureurl_qq, name: profile.nickname, dollar_money: 0, exchange_money: 0 }, { transaction: t })
         const userId = user.id
-        await models.qqstrategy.create({ uid: userId, openid: openid }, { transaction: t })
+        await models.QQstrategy.create({ uid: userId, openid: openid }, { transaction: t })
         return Promise.resolve({
             id: user.id,
             head: user.head,
@@ -47,9 +47,9 @@ const loginOrRegisterWechat = async(openid) => {
     const wechatProfile = await wechat.getUserWechatProfile(openid)
     let user = null
     if (wechatProfile.unionid) {
-        user = await db.Wechatstrategy.findOne({ where: { unionid: wechatProfile.unionid } })
+        user = await models.Wechatstrategy.findOne({ where: { unionid: wechatProfile.unionid } })
     } else {
-        user = await db.Wechatstrategy.findOne({ where: { openid: openid } })
+        user = await models.Wechatstrategy.findOne({ where: { openid: openid } })
     }
     if (!user) {
         user = await registerWechat(openid)
@@ -61,7 +61,7 @@ const loginOrRegisterWechat = async(openid) => {
 
 const loginOrRegisterQQ = async(access_token, openid) => {
     const qqProfile = await qq.getQQProfile(access_token, openid)
-    let user = await db.QQstrategy.findOne({ where: { openid: openid } })
+    let user = await models.QQstrategy.findOne({ where: { openid: openid } })
     if (!user) {
         user = await registerQQ(openid, qqProfile)
     }
