@@ -19,7 +19,7 @@ const get = async(url, data, isJson = true, isConver = false) => {
             let text = await value.text()
             let newstr = text.replace(/callback\(/, '')
             newstr = newstr.replace(/\);/i, '')
-            jsonValue = JSON.parse(jsonValue)
+            jsonValue = JSON.parse(newstr)
         } else {
             let text = await value.text()
             jsonValue = qs.parse(text)
