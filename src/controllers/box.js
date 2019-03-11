@@ -39,7 +39,7 @@ const getBox = async(ctx, next) => {
             attributes: ['pirce', 'name'],
             where: {
                 id: boxId,
-                show: 1
+                open: 1
             }
         });
         let goodsIds = []
