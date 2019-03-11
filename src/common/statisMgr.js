@@ -82,7 +82,7 @@ const pushMsgToClient = () => {
 }
 
 // 5秒钟向客户端推送一次消息
-setTimeout(pushMsgToClient, 5000)
+setInterval(pushMsgToClient, 5000)
 
 export default {
     initStatis,
