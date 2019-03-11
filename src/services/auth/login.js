@@ -64,6 +64,11 @@ const loginOrRegisterQQ = async(access_token, openid) => {
     let user = await models.QQstrategy.findOne({ where: { openid: openid } })
     if (!user) {
         user = await registerQQ(openid, qqProfile)
+    } else {
+        user = await models.User.findOne({
+            attributes: ['id', 'head', 'name', 'dollar_money', 'exchange_money'],
+            where: { id: user.uid }
+        })
     }
     return Promise.resolve(user)
 }
