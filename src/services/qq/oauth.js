@@ -29,7 +29,10 @@ const getOpenid = async(code) => {
             access_token: ret.access_token,
         }
         ret = await http.get(URL.QQ_Get_OpenID, args, false, true) // 获取openid
-        return Promise.resolve(ret.openid)
+        return Promise.resolve({
+            openid: ret.openid,
+            accessToken: args.access_token
+        })
     } catch (err) {
         return Promise.reject(`获取openId${err.message}`)
     }
@@ -45,7 +48,7 @@ const getQQProfile = async(access_token, openid) => {
     let args = {
         access_token: access_token,
         openid: openid,
-        oauth_consumer_key: config.qqApiKey,
+        oauth_consumer_key: config.qqAppid,
     }
     try {
         let ret = await http.get(URL.QQ_Get_UserInfo, args)
@@ -55,4 +58,4 @@ const getQQProfile = async(access_token, openid) => {
     }
 }
 
-export default { getOpenid }
+export default { getOpenid, getQQProfile }

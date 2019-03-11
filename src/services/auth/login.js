@@ -5,7 +5,7 @@ import models from '../../models/index'
 import lottery from '../../common/lottery'
 import MysqlError from '../../utils/error/MysqlError'
 import wechat from '../../services/wechat/oauth'
-import qq from '../../services/wechat/oauth'
+import qq from '../../services/qq/oauth'
 const SECRETKEY = "23233"
 const createToken = (userId, userAgent, days) => {
     return jwt.sign({
@@ -60,7 +60,7 @@ const loginOrRegisterWechat = async(openid) => {
 }
 
 const loginOrRegisterQQ = async(access_token, openid) => {
-    const qqProfile = await qq.getUserQQProfile(access_token, openid)
+    const qqProfile = await qq.getQQProfile(access_token, openid)
     let user = await db.QQstrategy.findOne({ where: { openid: openid } })
     if (!user) {
         user = await registerQQ(openid, qqProfile)
@@ -70,5 +70,6 @@ const loginOrRegisterQQ = async(access_token, openid) => {
 
 export {
     createToken,
-    loginOrRegisterWechat
+    loginOrRegisterWechat,
+    loginOrRegisterQQ
 }
