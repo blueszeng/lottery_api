@@ -23,7 +23,7 @@ const createToken = (userId, userAgent, days) => {
 
 const registerQQ = async(openid, profile) => {
     // 开始保存事务
-    await transaction(async(t) => {
+    let ret = await transaction(async(t) => {
         let user = await models.User.create({ head: profile.figureurl_qq, name: profile.nickname, dollar_money: 0, exchange_money: 0 }, { transaction: t })
         const userId = user.id
         await models.QQstrategy.create({ uid: userId, openid: openid }, { transaction: t })
@@ -35,6 +35,7 @@ const registerQQ = async(openid, profile) => {
             exchange_money: user.exchange_money,
         })
     })
+    return Promise.resolve(ret)
 }
 
 
