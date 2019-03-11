@@ -15,7 +15,7 @@ const get = async(url, data) => {
     try {
         console.log('sddssd111', url, options)
         let value = await fetch(url, options)
-        jsonValue = await value.json()
+        jsonValue = await value.text()
         console.log('sddssd', jsonValue)
         return Promise.resolve(jsonValue)
     } catch (err) {
