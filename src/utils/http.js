@@ -13,9 +13,8 @@ const get = async(url, data) => {
     url = url + '?' + param;
     let jsonValue = null;
     try {
-        console.log('sddssd111', url, options)
         let value = await fetch(url, options)
-        jsonValue = await value.text()
+        jsonValue = await value.json()
         console.log('sddssd', jsonValue)
         return Promise.resolve(jsonValue)
     } catch (err) {

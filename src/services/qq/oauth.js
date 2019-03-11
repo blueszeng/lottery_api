@@ -26,7 +26,7 @@ const getOpenid = async(code) => {
         let ret = await http.get(URL.QQ_Get_Access_Token, args) // 获取access_token
         console.log('cmdmdmdmdmd', ret)
         args = {
-            access_token: 'authorization_code',
+            access_token: ret.access_token,
         }
         ret = await http.get(URL.QQ_Get_OpenID, args) // 获取openid
         return Promise.resolve(ret.openid)
