@@ -36,7 +36,6 @@ const exChangeGoods = async(ctx, next) => {
         await user.update({ // 更新金币
             exchange_money
         })
-        console.log('fuckckckc')
         let userGoods = await models.UserGoods.findOne({ where: { goods_id: query.goodsId } })
         if (userGoods) { //加物品
             userGoods.increment('goods_num', { by: 1 })

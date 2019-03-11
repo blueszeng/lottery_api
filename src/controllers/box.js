@@ -25,7 +25,7 @@ const getBox = async(ctx, next) => {
     try {
         let { pirce } = await models.Box.findOne({
             attributes: ['pirce'],
-            where: { id: boxId, show: 1 }
+            where: { id: boxId, open: 1 }
         })
 
         let boxGoods = await models.Box.findOne({

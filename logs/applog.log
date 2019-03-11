@@ -4149,3 +4149,31 @@
                 Request Body: {}
                 Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
                 Response Body: {"reqId":"bNKXIWE2Wjp7oCv4","data":[{"sdcustomno":"1010101010","pay_type":1,"money":100,"dollar_money":13,"state":1,"created_at":"2019-03-03T00:00:00.000Z"}]}
+[2019-03-10T18:04:22.519] [INFO] lotteryApp - [2019-03-10 18:04:12] [::ffff:127.0.0.1] [GET] [/api/user/records] [510] [10073ms]
+                Request Id: 6237hBrG5Ro6YtXQ
+                Request Headers: {"host":"127.0.0.1:3001","connection":"keep-alive","accept":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36","referer":"http://127.0.0.1:3001/swagger","accept-encoding":"gzip, deflate, br","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7","cookie":"_ga=GA1.1.1301984627.1507365060; Huiskin=default; pgv_pvid=6215925555; __qc__k=TC_MK=3FA05FBDDE384D1ACA568F4AA4DFB0D4; boss.sid.sig=UqdCLd3uXRj62n753jhFUfxmLzk"}
+                Request Query: {"type":"1"}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"6237hBrG5Ro6YtXQ","message":"connect ETIMEDOUT"}
+[2019-03-10T18:04:38.669] [INFO] lotteryApp - [2019-03-10 18:04:28] [::ffff:127.0.0.1] [GET] [/api/user/records] [510] [10021ms]
+                Request Id: XN2gH63P4a2bBTR
+                Request Headers: {"host":"127.0.0.1:3001","connection":"keep-alive","accept":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36","referer":"http://127.0.0.1:3001/swagger","accept-encoding":"gzip, deflate, br","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7","cookie":"_ga=GA1.1.1301984627.1507365060; Huiskin=default; pgv_pvid=6215925555; __qc__k=TC_MK=3FA05FBDDE384D1ACA568F4AA4DFB0D4; boss.sid.sig=UqdCLd3uXRj62n753jhFUfxmLzk"}
+                Request Query: {"type":"1"}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"XN2gH63P4a2bBTR","message":"connect ETIMEDOUT"}
+[2019-03-10T18:05:02.376] [INFO] lotteryApp - [2019-03-10 18:04:57] [::ffff:127.0.0.1] [GET] [/api/user/records] [510] [5344ms]
+                Request Id: dNZlsz7W5Ko59Tqo
+                Request Headers: {"host":"127.0.0.1:3001","connection":"keep-alive","accept":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36","referer":"http://127.0.0.1:3001/swagger","accept-encoding":"gzip, deflate, br","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7","cookie":"_ga=GA1.1.1301984627.1507365060; Huiskin=default; pgv_pvid=6215925555; __qc__k=TC_MK=3FA05FBDDE384D1ACA568F4AA4DFB0D4; boss.sid.sig=UqdCLd3uXRj62n753jhFUfxmLzk"}
+                Request Query: {"type":"1"}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"dNZlsz7W5Ko59Tqo","message":"connect ETIMEDOUT"}
+[2019-03-10T18:10:47.126] [INFO] lotteryApp - [2019-03-10 18:10:47] [::ffff:127.0.0.1] [GET] [/api/user/records] [200] [40ms]
+                Request Id: bNDWfWE24r5pyUPA
+                Request Headers: {"host":"127.0.0.1:3001","connection":"keep-alive","accept":"application/json","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36","referer":"http://127.0.0.1:3001/swagger","accept-encoding":"gzip, deflate, br","accept-language":"zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7","cookie":"_ga=GA1.1.1301984627.1507365060; Huiskin=default; pgv_pvid=6215925555; __qc__k=TC_MK=3FA05FBDDE384D1ACA568F4AA4DFB0D4; boss.sid.sig=UqdCLd3uXRj62n753jhFUfxmLzk"}
+                Request Query: {"type":"1"}
+                Request Body: {}
+                Response Headers: {"access-control-allow-origin":"*","access-control-allow-methods":"GET,HEAD,PUT,POST,DELETE","content-type":"application/json; charset=utf-8"}
+                Response Body: {"reqId":"bNDWfWE24r5pyUPA","data":[]}

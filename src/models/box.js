@@ -39,7 +39,7 @@ export default (sequelize, DataTypes) => {
             },
             comment: "[0不能免费打开, 1能免费打开]",
         },
-        show: {
+        open: {
             type: DataTypes.BOOLEAN,
             validate: {
                 notEmpty: true,
