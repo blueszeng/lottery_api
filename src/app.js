@@ -20,7 +20,19 @@ const redisStore = koaRedis({
     url: config.redisUrl
 })
 const app = new Koa()
-app.use(convert(cors()))
+app.use(convert(cors({
+    origin: function(ctx) {
+        if (ctx.url === '/test') {
+            return "*" // 允许来自所有域名请求
+        }
+        return '*'
+    },
+    exposeHeaders: ['X-Lottery-App-Token'],
+    maxAge: 5,
+    credentials: true,
+    allowMethods: ['GET', 'POST', 'DELETE'],
+    allowHeaders: ['Content-Type', 'Authorization', 'Accept'],
+})))
 app.keys = [config.secretKeyBase]
 if (config.serveStatic) {
     app.use(convert(require('koa-static')(path.join(__dirname, './public/'))))
@@ -52,8 +64,8 @@ app.io.use(async function(ctx, next) {
     // add decrypt , encrypt func
     ctx.decrypt = crypto.decryptCipher
     ctx.encrypt = crypto.encryptCipher
-    await next();
-});
+    await next()
+})
 
-ioRoute(app.io); // add socket route
+ioRoute(app.io) // add socket route
 global.io = app.io // 设置全局
