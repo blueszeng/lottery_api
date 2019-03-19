@@ -6,9 +6,17 @@ import { createQrderPay } from '../services/alipay/api'
 
 
 const getPayInfo = async(ctx, next) => {
+
     try {
+        let payExchangeRate = await models.Config.findOne({
+            attributes: ['value'],
+            where: {
+                key: 'payExchangeRate'
+            }
+        })
+        let rate = parseFloat(payExchangeRate.value)
         return Promise.resolve({
-            rate: 7.1
+            rate
         })
     } catch (err) {
         return Promise.reject(`getPayInfo${err.message}`)
@@ -25,16 +33,26 @@ const alipayCreateOrder = async(ctx, next) => {
             money: Joi.number().integer().min(20).required(10000).label('人民币金额'),
             dollar_money: Joi.number().integer().min(3).max(1000).required().label('美元金额')
         })
-        body = await validate(ctx.request.body, validateSchema)
+        query = await validate(ctx.request.query, validateSchema)
         const userId = ctx.state.userId
+        let payExchangeRate = await models.Config.findOne({
+            attributes: ['value'],
+            where: {
+                key: 'payExchangeRate'
+            }
+        })
+        let rate = parseFloat(payExchangeRate.value)
+        if (rate * query.dollar_money != query.money) {
+            return Promise.reject(`参数错误`)
+        }
+        dollar_money = payExchangeRate
         const data = {
             userId: userId,
             sdcustomno: util.generateOrderNo(),
-            money: body.money,
-            dollar_money: dollar_money,
+            money: query.money,
+            dollar_money: query.dollar_money,
             state: 0
         }
-
         let ret = await createQrderPay({
             tradeNo: data.sdcustomno,
             money: data.money,

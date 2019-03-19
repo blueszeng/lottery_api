@@ -3,8 +3,8 @@ import { Joi, validate } from '../utils/validator'
 import debug from '../utils/debug'
 import util from '../utils/util'
 import { OPEN_BOX } from '../utils/const'
-import Sequelize from 'sequelize'
 import statisMgr from '../common/statisMgr'
+import Sequelize from 'sequelize'
 const Op = Sequelize.Op
 const log = debug(__filename)
 
@@ -23,8 +23,8 @@ const getBox = async(ctx, next) => {
         return Promise.reject(err.message)
     }
     try {
-        let { pirce } = await models.Box.findOne({
-            attributes: ['pirce'],
+        let { price } = await models.Box.findOne({
+            attributes: ['price'],
             where: { id: boxId, open: 1 }
         })
 
@@ -36,7 +36,7 @@ const getBox = async(ctx, next) => {
                     attributes: ['drop_probability'],
                 }
             }],
-            attributes: ['pirce', 'name'],
+            attributes: ['price', 'name'],
             where: {
                 id: boxId,
                 open: 1
@@ -59,9 +59,30 @@ const getBox = async(ctx, next) => {
             qualitiesMapGoodsId[goodsQualities[i].id] = goodsQualities[i].img
         }
         for (let i in boxGoods.Goods) {
+            boxGoods.Goods[i].setDataValue('drop_probability', boxGoods.Goods[i].BoxGoods.drop_probability)
+            boxGoods.Goods[i].setDataValue('BoxGoods', undefined)
             boxGoods.Goods[i].setDataValue('qualities_img', qualitiesMapGoodsId[boxGoods.Goods[i].goods_qualities_id])
         }
-        return Promise.resolve(boxGoods)
+
+
+        // boxGoods = await models.Box.count()
+        const boxs = models.Box.findAll({
+            // offset,
+            // limit,
+            // where,
+            include: [{
+                    model: models.Game,
+                    attributes: ['id', 'name'],
+                },
+                {
+                    model: models.BoxType,
+                    attributes: ['id', 'name'],
+                }
+            ],
+        })
+
+
+        return Promise.resolve(boxs)
     } catch (err) {
         return Promise.reject(err.message)
     }

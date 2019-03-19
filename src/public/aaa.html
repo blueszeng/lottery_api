@@ -3,15 +3,21 @@
 <head>
 </head>
 
-https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id=101552475&redirect_uri=http://swxhm.jdy518.com/api/auth/loginQQ
+
 
 <body>
-    <button id="qqLoginBtn" onclick="qqLogin()">SDSDS</button>
-    <script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="101552475" data-redirecturi="http://swxhm.jdy518.com/api/auth/loginQQ" charset="utf-8"></script>
     <script type="text/javascript">
-        function qqLogin() {
-            QC.Login.showPopup();
+        function getUrlParam(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]);
+            return null;
         }
+        console.log(location.href.split('#')[0])
+        var url = "https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id=101552475&redirect_uri=http://swxhm.jdy518.com/api/auth/loginQQ"
+        window.location = url
+            // var code = getUrlParam("code");
+        console.log(code)
     </script>
 </body>
 

@@ -6,20 +6,17 @@ import lottery from '../../common/lottery'
 import MysqlError from '../../utils/error/MysqlError'
 import wechat from '../../services/wechat/oauth'
 import qq from '../../services/qq/oauth'
-const SECRETKEY = "23233"
+import { secretKeyBase } from '../../configs/config'
 const createToken = (userId, userAgent, days) => {
     return jwt.sign({
         userId,
         userAgent,
         days,
         renewTime: moment().add(1, 'h').unix()
-    }, SECRETKEY, {
+    }, secretKeyBase, {
         expiresIn: `${days}d`
     })
 }
-
-
-
 
 const registerQQ = async(openid, profile) => {
     // 开始保存事务

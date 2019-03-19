@@ -157,8 +157,58 @@ router.get('/decomposeGoods', user.decomposeGoods) // 分解物品
  */
 router.get('/records', user.recordData) // 获取用户记录数据
 
-router.post('/getPayInfo', pay.getPayInfo) // 获取充值配置
+
+/**
+ * @swagger
+ * /api/user/getPayInfo:
+ *  get:
+ *    tags:
+ *      - user
+ *    description: 获取充值美元兑换比率
+ *    produces:
+ *      -"application/json"
+ *    responses:
+ *      200:
+ *          description: 返回成功
+ *      510:
+ *          descriptigeton: 服务器异常
+ *      412:
+ *          description: 参数校验错误
+ */
+router.get('/getPayInfo', pay.getPayInfo) // 获取充值配置
+
+
+/**
+ * @swagger
+ * /api/user/alipayCreateOrder:
+ *  get:
+ *    tags:
+ *      - user
+ *    description:  生成充值二维码
+ *    produces:
+ *      -"application/json"
+ *    parameters:
+ *      - in: "query"
+ *        name: "money"
+ *        description: 充值人民币金额
+ *        required: true
+ *        type: "integer"
+ *      - in: "query"
+ *        name: "dollar_money"
+ *        description: 充值美元金额
+ *        required: true
+ *        type: "integer"
+ *    responses:
+ *      200:
+ *          description: 返回成功
+ *      510:
+ *          descriptigeton: 服务器异常
+ *      412:
+ *          description: 参数校验错误
+ */
+router.get('/alipayCreateOrder', pay.alipayCreateOrder) // 生成二维码 
+
 router.post('/alipayPayNotify', pay.alipayPayNotify) // 充值回调
-router.post('/alipayCreateOrder', pay.alipayCreateOrder) // 生成二维码 
+
 
 module.exports = router

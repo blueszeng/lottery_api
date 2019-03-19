@@ -22,13 +22,23 @@ const luckyRange = async(ctx, next) => {
         goodsId: Joi.number().required().min(1).label('宝箱id'),
     })
     try {
+
+        let luckyMultiple = await models.Config.findOne({
+            attributes: ['value'],
+            where: {
+                key: 'luckyMultiple'
+            }
+        })
+        let multiple = parseFloat(luckyMultiple.value)
         const { goodsId } = await validate(query, validateSchema)
         let goods = await models.Goods.findOne({
-            attributes: ['id', 'max_cost_price', 'min_cost_price', 'name', 'skin_name'],
+            attributes: ['id', 'sell_price', 'name', 'skin_name'],
             where: { id: goodsId }
         })
         goods.setDataValue('max_chance', Lucky.maxChance)
         goods.setDataValue('min_chance', Lucky.minChance)
+        goods.setDataValue('max_cost_price', Lucky.maxChance * multiple * goods.sell_price)
+        goods.setDataValue('min_cost_price', Lucky.minChance * multiple * goods.sell_price)
         return Promise.resolve({
             goods
         })
@@ -52,14 +62,23 @@ const luckyLottery = async(ctx, next) => {
         })
         const body = await validate(ctx.request.body, validateSchema)
         const goodsId = body.goodsId
+
+        let luckyMultiple = await models.Config.findOne({
+            attributes: ['value'],
+            where: {
+                key: 'luckyMultiple'
+            }
+        })
+        let multiple = parseFloat(luckyMultiple.value)
         let goods = await models.Goods.findOne({
-            attributes: ['id', 'img', 'name', 'goods_model_id', 'max_cost_price', 'min_cost_price', 'skin_name', 'goods_qualities_id'],
+            attributes: ['id', 'img', 'name', 'goods_model_id', 'sell_price', 'skin_name', 'goods_qualities_id'],
             where: { id: goodsId }
         })
-        const minCost = goods.min_cost_price
-        const maxCost = goods.max_cost_price
         const minChance = Lucky.minChance
         const maxChance = Lucky.maxChance
+        const minCost = Lucky.minChance * multiple * goods.sell_price
+        const maxCost = Lucky.maxChance * multiple * goods.sell_price
+
         const needMoney = (minCost + (maxCost - minCost) * (body.section - minChance) / (maxChance - minChance)).toFixed(2)
             // console.log(needMoney)
 
@@ -110,7 +129,7 @@ const luckyLottery = async(ctx, next) => {
             })
         } else { // 得到垃圾装备
             goodsList = await models.Goods.findAll({
-                attributes: ['id', 'skin_name', 'name', 'goods_qualities_id'],
+                attributes: ['id', 'skin_name', 'name', 'goods_qualities_id', 'img', 'skin_name', 'discrable'],
                 where: {
                     id: {
                         [Op.lte]: Lucky.inferiorPrice
@@ -187,11 +206,11 @@ const openBox = async(ctx, next) => {
         return Promise.reject(err.message)
     }
 
-    let { pirce } = await models.Box.findOne({ // 查找宝盒价格
-        attributes: ['pirce'],
+    let { price } = await models.Box.findOne({ // 查找宝盒价格
+        attributes: ['price'],
         where: { id: query.boxId, open: 1 }
     })
-    const money = pirce * num
+    const money = price * num
     const userId = ctx.state.userId || 1
 
     let user = await models.User.findById(userId)
@@ -235,7 +254,7 @@ const openBox = async(ctx, next) => {
             // 保存抽奖记录
             await models.WinPrizePush.create({ uid: userId, type: OPEN_BOX, goods_id: awards[i] })
             const goods = await models.Goods.findOne({
-                attributes: ['img', 'name', 'id', 'goods_qualities_id'],
+                attributes: ['img', 'name', 'id', 'goods_qualities_id', 'skin_name', 'discrable'],
                 where: { id: awards[i] }
             })
             goodsList.push(goods)

@@ -41,7 +41,7 @@ const getGameBoxList = async(ctx, next) => {
             //         }]
             //     })
         let box = await models.Box.findAll({
-            attributes: ['id', 'img', 'name', 'pirce', 'state', 'box_type_id'],
+            attributes: ['id', 'img', 'name', 'price', 'state', 'box_type_id'],
             where: { game_id: gameId },
             include: [{
                 model: models.BoxType,

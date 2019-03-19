@@ -73,7 +73,7 @@ const getKindGoods = async(ctx, next) => {
 
     try {
         let goods = await models.Goods.findAll({
-            attributes: ['id', 'img', 'name', 'skin_name', 'discrable', 'price'],
+            attributes: ['id', 'img', 'name', 'skin_name', 'discrable', 'sell_price'],
             where: { goods_model_id: model }
         })
         return Promise.resolve({

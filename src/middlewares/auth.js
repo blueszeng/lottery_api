@@ -33,6 +33,7 @@ const allowPassPathAndMethod = (path, method) => {
         { path: '/api/user/exChangeOutGoods', method: 'GET' },
         { path: '/api/user/decomposeGoods', method: 'GET' },
         { path: '/api/user/records', method: 'GET' },
+        { path: '/api/user/getPayInfo', method: 'GET' },
         { path: '/api-docs', method: 'GET' },
     ]
     let isAllowed = false
@@ -58,7 +59,9 @@ export default async(ctx, next) => {
         if (parts.length === 2 && parts[0] === 'Bearer') {
             const token = parts[1]
             try {
+                console.log(token)
                 const user = jwt.verify(token, secretKeyBase)
+                console.log(user)
                 if (user && user.userAgent === userAgent) {
                     isAuthed = true
                     ctx.state = ctx.state || {}
@@ -70,7 +73,7 @@ export default async(ctx, next) => {
                     }
                 }
             } catch (err) {
-                debug(`TOKEN 认证错误: ${s}`)
+                log(`TOKEN 认证错误: ${err}`)
             }
         }
     }

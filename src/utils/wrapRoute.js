@@ -11,6 +11,7 @@ const wrapRoute = (fn, ...args) => {
         try {
             const data = await fn.apply(ctx, [ctx, ...args])
                 // ctx.status = isPost ? 201 : 200
+            JSON.stringify(ctx.request.header)
             ctx.status = 200
             ctx.body = { reqId, data }
         } catch (err) {

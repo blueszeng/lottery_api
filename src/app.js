@@ -3,7 +3,7 @@ import Koa from './extendlib/koa.io' // extend socket.io
 import session from 'koa-generic-session'
 import convert from 'koa-convert'
 import json from 'koa-json'
-import cors from 'koa-cors'
+import cors from 'koa2-cors'
 import logger from 'koa-logger'
 import bodyParser from 'koa-bodyparser'
 import koaRedis from 'koa-redis'
@@ -20,7 +20,8 @@ const redisStore = koaRedis({
     url: config.redisUrl
 })
 const app = new Koa()
-app.use(convert(cors({
+
+app.use(cors({
     origin: function(ctx) {
         if (ctx.url === '/test') {
             return "*" // 允许来自所有域名请求
@@ -32,7 +33,8 @@ app.use(convert(cors({
     credentials: true,
     allowMethods: ['GET', 'POST', 'DELETE'],
     allowHeaders: ['Content-Type', 'Authorization', 'Accept'],
-})))
+}))
+
 app.keys = [config.secretKeyBase]
 if (config.serveStatic) {
     app.use(convert(require('koa-static')(path.join(__dirname, './public/'))))
@@ -43,8 +45,6 @@ app.use(convert(session({
     prefix: 'boss:sess:',
     key: 'boss.sid'
 })))
-
-
 
 
 swagger(app)
