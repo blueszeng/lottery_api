@@ -65,24 +65,24 @@ const getBox = async(ctx, next) => {
         }
 
 
-        // boxGoods = await models.Box.count()
-        const boxs = models.Box.findAll({
-            // offset,
-            // limit,
-            // where,
-            include: [{
-                    model: models.Game,
-                    attributes: ['id', 'name'],
-                },
-                {
-                    model: models.BoxType,
-                    attributes: ['id', 'name'],
-                }
-            ],
-        })
+        // // boxGoods = await models.Box.count()
+        // const boxs = models.Box.findAll({
+        //     // offset,
+        //     // limit,
+        //     // where,
+        //     include: [{
+        //             model: models.Game,
+        //             attributes: ['id', 'name'],
+        //         },
+        //         {
+        //             model: models.BoxType,
+        //             attributes: ['id', 'name'],
+        //         }
+        //     ],
+        // })
 
 
-        return Promise.resolve(boxs)
+        return Promise.resolve(boxGoods)
     } catch (err) {
         return Promise.reject(err.message)
     }
