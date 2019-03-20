@@ -23,12 +23,8 @@ const router = Router({
  *        required: true
  *        type: "integer"
  *      - in: "query"
- *        name: "offset"
+ *        name: "page"
  *        description: 第几页
- *        type: "integer"
- *      - in: "query"
- *        name: "limit"
- *        description: 每页多少条
  *        type: "integer"
  *      - in: "query"
  *        name: "goods_name"

@@ -9,10 +9,10 @@ const log = debug('goods=>')
  */
 const getExChangeGoods = async(ctx, next) => {
     let { query } = ctx.request
+    query.page = query.page || 1
     const validateSchema = Joi.object().keys({
         gameId: Joi.number().required().label('游戏id'),
-        offset: Joi.number().min(0).label('第几页'),
-        limit: Joi.number().min(0).label('多少条'),
+        page: Joi.number().min(1).label('第几页'),
         goods_name: Joi.string().label('查询名称'),
     })
     try {
@@ -21,9 +21,8 @@ const getExChangeGoods = async(ctx, next) => {
         log('验证参数错误', err.message)
         return Promise.reject(err.message)
     }
-
     try {
-        let pageLen = 10
+        let pageLen = 15
         let gameId = query.gameId
         let game = await models.Game.findOne({
             attributes: ['id', 'name'],
@@ -31,13 +30,18 @@ const getExChangeGoods = async(ctx, next) => {
                 id: gameId
             }
         })
-        let offset = query.offset || 0
+
+        let offset = query.page - 1
         offset = offset * pageLen
-        let limit = query.limit || 10
+        let limit = pageLen
         let where = { game_id: gameId }
         if (query.goods_name) {
             where.name = query.goods_name
         }
+        let count = await models.Goods.count({
+            where
+        })
+
         let goods = await models.Goods.findAll({
             attributes: ['id', 'img', 'name', 'skin_name', 'discrable', 'exchange_price'],
             offset,
@@ -46,7 +50,8 @@ const getExChangeGoods = async(ctx, next) => {
         })
         return Promise.resolve({
             game,
-            goods
+            goods,
+            count
         })
     } catch (err) {
         return Promise.reject(err.message)
