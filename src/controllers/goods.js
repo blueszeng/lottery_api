@@ -13,7 +13,7 @@ const getExChangeGoods = async(ctx, next) => {
     const validateSchema = Joi.object().keys({
         gameId: Joi.number().required().label('游戏id'),
         page: Joi.number().min(1).label('第几页'),
-        goods_name: Joi.string().label('查询名称'),
+        goodsName: Joi.string().label('查询名称'),
     })
     try {
         query = await validate(query, validateSchema)
@@ -35,8 +35,8 @@ const getExChangeGoods = async(ctx, next) => {
         offset = offset * pageLen
         let limit = pageLen
         let where = { game_id: gameId }
-        if (query.goods_name) {
-            where.name = query.goods_name
+        if (query.goodsName) {
+            where.name = query.goodsName
         }
         let count = await models.Goods.count({
             where

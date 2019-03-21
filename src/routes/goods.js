@@ -27,7 +27,7 @@ const router = Router({
  *        description: 第几页
  *        type: "integer"
  *      - in: "query"
- *        name: "goods_name"
+ *        name: "goodsName"
  *        description: 查询物品名称
  *        type: "string"
  *    responses:
