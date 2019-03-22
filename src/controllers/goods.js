@@ -65,24 +65,40 @@ const getExChangeGoods = async(ctx, next) => {
  * 分类获取物品
  */
 const getKindGoods = async(ctx, next) => {
-    let model = ctx.params.model
-    const validSchema = Joi.object().keys({
-        model: Joi.number().required().label('物品型号')
+    let { query } = ctx.request
+    query.page = query.page || 1
+    const validateSchema = Joi.object().keys({
+        modelId: Joi.number().required().label('物品型号'),
+        page: Joi.number().min(1).label('第几页'),
+        goodsName: Joi.string().label('查询名称'),
     })
     try {
-        let tmpArgs = await validate({ model }, validSchema)
-        model = tmpArgs.model
+        query = await validate(query, validateSchema)
     } catch (err) {
+        log('验证参数错误', err.message)
         return Promise.reject(err.message)
     }
-
     try {
+        let pageLen = 15
+        let offset = query.page - 1
+        offset = offset * pageLen
+        let limit = pageLen
+        let where = { goods_model_id: query.modelId }
+        if (query.goodsName) {
+            where.name = query.goodsName
+        }
+        let count = await models.Goods.count({
+            where
+        })
         let goods = await models.Goods.findAll({
+            offset,
+            limit,
             attributes: ['id', 'img', 'name', 'skin_name', 'discrable', 'sell_price'],
-            where: { goods_model_id: model }
+            where
         })
         return Promise.resolve({
-            goods
+            goods,
+            count
         })
     } catch (err) {
         return Promise.reject(err.message)

@@ -62,7 +62,7 @@ router.get('/goodsTypesList', wrapRoute(goodsType.getGoodsTypes)) // 获得物�
 
 /**
  * @swagger
- * /api/goods/goodsModel/{model}:
+ * /api/goods/goodsModel:
  *   get:
  *     tags:
  *       - Goods
@@ -70,11 +70,19 @@ router.get('/goodsTypesList', wrapRoute(goodsType.getGoodsTypes)) // 获得物�
  *     produces:
  *       - application/json
  *     parameters:
- *     - in: "path"
- *       name: "model"
- *       type: "integer"
- *       required: true
- *       description: 物品型号id
+ *      - in: "query"
+ *        name: "modelId"
+ *        description: 游戏型号id
+ *        required: true
+ *        type: "integer"
+ *      - in: "query"
+ *        name: "page"
+ *        description: 第几页
+ *        type: "integer"
+ *      - in: "query"
+ *        name: "goodsName"
+ *        description: 查询物品名称
+ *        type: "string"
  *     responses:
  *       200:
  *         description: 成功
@@ -86,5 +94,5 @@ router.get('/goodsTypesList', wrapRoute(goodsType.getGoodsTypes)) // 获得物�
  *       412:
  *          description: 参数校验错误
  */
-router.get('/goodsModel/:model', wrapRoute(goods.getKindGoods)) // 通过物品型号得到物品
+router.get('/goodsModel', wrapRoute(goods.getKindGoods)) // 通过物品型号得到物品
 module.exports = router
