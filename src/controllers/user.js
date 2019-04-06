@@ -196,11 +196,48 @@ const decomposeGoods = async(ctx, next) => {
 
 }
 
-// 1. 获得XXX 物品1件
-// 1. 赠送给XXXX 物品1件
-// 2.
-// 3. 分解XXX 物品 1 件 获得（ 兑换币 | 美元） 100.
-// 4. 
+const getGoodsList = async(ctx, next) => {
+    let { query } = ctx.request
+    const validateSchema = Joi.object().keys({
+        page: Joi.number().min(1).label('第几页'),
+    })
+    try {
+        query = await validate(query, validateSchema)
+    } catch (err) {
+        log(err.message)
+        return Promise.reject(err.message)
+    }
+    try {
+        let pageLen = 8
+        let offset = query.page - 1
+        offset = offset * pageLen
+        let limit = pageLen
+        const userId = ctx.state.userId || 1
+        let where = { uid: userId }
+        let count = await models.UserGoods.count({
+            where
+        })
+        let goods = await models.UserGoods.findAll({
+            attributes: ['created_at'],
+            offset,
+            limit,
+            where,
+            include: [{
+                model: models.Goods,
+                attributes: ['id', 'img', 'name', 'skin_name', 'discrable']
+            }]
+        })
+        return Promise.resolve({
+            goods,
+            count
+        })
+
+    } catch (err) {
+        log(err.message)
+        return Promise.reject(err.message)
+    }
+}
+
 /**
  * 获取用户记录数据
  */
@@ -379,5 +416,6 @@ export default {
     giveGoods,
     exChangeOutGoods,
     decomposeGoods,
+    getGoodsList,
     recordData
 }

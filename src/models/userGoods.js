@@ -35,5 +35,10 @@ export default (sequelize, DataTypes) => {
         classMethods: {},
         instanceMethods: {}
     })
+
+    UserGoods.associate = function(models) {
+        UserGoods.belongsTo(models.Goods, { foreignKey: 'goods_id' })
+    }
+
     return UserGoods
 }

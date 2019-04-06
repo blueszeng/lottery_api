@@ -35,5 +35,6 @@ export default (sequelize, DataTypes) => {
         classMethods: {},
         instanceMethods: {}
     })
+
     return UserBox
 }
