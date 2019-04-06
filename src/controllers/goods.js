@@ -22,7 +22,7 @@ const getExChangeGoods = async(ctx, next) => {
         return Promise.reject(err.message)
     }
     try {
-        let pageLen = 15
+        let pageLen = 16
         let gameId = query.gameId
         let game = await models.Game.findOne({
             attributes: ['id', 'name'],
@@ -79,7 +79,7 @@ const getKindGoods = async(ctx, next) => {
         return Promise.reject(err.message)
     }
     try {
-        let pageLen = 15
+        let pageLen = 16
         let offset = query.page - 1
         offset = offset * pageLen
         let limit = pageLen
