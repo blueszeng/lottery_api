@@ -228,7 +228,7 @@ const recordData = async(ctx, next) => {
         let count = 0
         let where = {}
         switch (query.type) {
-            case 2:
+            case 4:
                 where = { uid: userId }
                 count = await models.WinPrizePush.count({
                     where
@@ -250,7 +250,7 @@ const recordData = async(ctx, next) => {
                     records[recordId].setDataValue('Good', undefined)
                 }
                 break
-            case 4:
+            case 1:
                 where = { send_uid: userId }
                 count = await models.GiveGoods.count({
                     where
@@ -313,7 +313,7 @@ const recordData = async(ctx, next) => {
                     records[recordId].setDataValue('Good', undefined)
                 }
                 break
-            case 1:
+            case 2:
                 where = { uid: userId }
                 count = await models.ExchangeGoods.count({
                     where
