@@ -204,6 +204,7 @@ const recordData = async(ctx, next) => {
     //  1.掉落，2 赠送， 3，分解， 4.兑换， 5.充值。
     let { query } = ctx.request
     const validateSchema = Joi.object().keys({
+        page: Joi.number().min(1).label('第几页'),
         type: Joi.number().integer().required().min(1).max(5).label('记录类型'),
     })
     try {
@@ -213,13 +214,25 @@ const recordData = async(ctx, next) => {
         return Promise.reject(err.message)
     }
     try {
+        let pageLen = 16
+        let offset = query.page - 1
+        offset = offset * pageLen
+        let limit = pageLen
         const userId = ctx.state.userId || 1
         let records = null
+        let count = 0
+        let where = {}
         switch (query.type) {
             case 1:
+                where = { uid: userId }
+                count = await models.WinPrizePush.count({
+                    where
+                })
                 records = await models.WinPrizePush.findAll({
                     attributes: ['created_at'],
-                    where: { uid: userId },
+                    offset,
+                    limit,
+                    where,
                     include: [{
                         model: models.Goods,
                         attributes: ['id', 'name']
@@ -233,9 +246,15 @@ const recordData = async(ctx, next) => {
                 }
                 break
             case 2:
+                where = { send_uid: userId }
+                count = await models.GiveGoods.count({
+                    where
+                })
                 records = await models.GiveGoods.findAll({
+                    offset,
+                    limit,
                     attributes: ['created_at', 'goods_num', 'recv_uid'],
-                    where: { send_uid: userId },
+                    where,
                     include: [{
                         model: models.Goods,
                         attributes: ['id', 'name']
@@ -268,9 +287,15 @@ const recordData = async(ctx, next) => {
                 break
 
             case 3:
+                where = { uid: userId }
+                count = await models.DecomposeGoods.count({
+                    where
+                })
                 records = await models.DecomposeGoods.findAll({
                     attributes: ['created_at', 'money_type', 'money'],
-                    where: { uid: userId },
+                    where,
+                    offset,
+                    limit,
                     include: [{
                         model: models.Goods,
                         attributes: ['id', 'name']
@@ -284,9 +309,15 @@ const recordData = async(ctx, next) => {
                 }
                 break
             case 4:
+                where = { uid: userId }
+                count = await models.ExchangeGoods.count({
+                    where
+                })
                 records = await models.ExchangeGoods.findAll({
                     attributes: ['orderid', 'created_at', 'game_zone_info', 'goods_num', 'game_id', 'game_account', 'game_zone_info', 'state'],
-                    where: { uid: userId },
+                    offset,
+                    limit,
+                    where,
                     include: [{
                         model: models.Goods,
                         attributes: ['id', 'name']
@@ -318,12 +349,21 @@ const recordData = async(ctx, next) => {
                 }
                 break
             case 5:
+                where = { uid: userId }
+                count = await models.Order.count({
+                    where
+                })
                 records = await models.Order.findAll({
                     attributes: ['sdcustomno', 'pay_type', 'money', 'dollar_money', 'state', 'created_at'],
-                    where: { uid: userId },
+                    offset,
+                    limit,
+                    where
                 })
         }
-        return Promise.resolve(records)
+        return Promise.resolve({
+            records,
+            count
+        })
     } catch (err) {
         log(err.message)
         return Promise.reject(err.message)
