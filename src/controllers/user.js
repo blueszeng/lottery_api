@@ -228,9 +228,9 @@ const getGoodsInfo = async(ctx, next) => {
     return Promise.resolve({
         goods_num: goodsNum,
         img: goods.img,
-        name: goods.img,
-        skin_name: goods.img,
-        discrable: goods.img,
+        name: goods.name,
+        skin_name: goods.skin_name,
+        discrable: goods.discrable,
         decompose_dollar_price: decomposeDollarPrice,
         decompose_exchange_price: decomposeExchangePrice,
     })
