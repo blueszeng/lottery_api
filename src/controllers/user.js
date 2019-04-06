@@ -27,17 +27,21 @@ const giveGoods = async(ctx, next) => {
         if (query.recvUid === userId) {
             return Promise.reject('不能给自己赠送')
         }
+        // console.log(query.recvUid)
         let recvUser = await models.User.findById(query.recvUid)
+            // console.log(query.recvUid, recvUser)
         if (recvUser === null) {
             return Promise.reject('接受物品玩家不存在')
         }
 
+        let allUser = await models.User.findAll()
         let user = await models.User.findById(userId)
-
+        console.log(userId, query.goodsId)
         let userGoods = await models.UserGoods.findOne({
             attributes: ['id', 'goods_id', 'goods_num'],
             where: { uid: userId, goods_id: query.goodsId }
         })
+        console.log(userGoods)
         if (userGoods && userGoods.goods_num < query.goodsNum) {
             return Promise.reject('玩家物品不够')
         }
@@ -65,13 +69,13 @@ const giveGoods = async(ctx, next) => {
         } else {
             userGoods.destroy()
         }
-
+        console.log(util.generateOrderNo())
         await models.GiveGoods.create({ // 添加一条赠送物品记录
             send_uid: userId,
             recv_uid: query.recvUid,
             goods_id: query.goodsId,
             goods_num: query.goodsNum,
-            orderid: util.generateOrderNo(),
+            orderId: util.generateOrderNo(),
         })
         return Promise.resolve(true)
     } catch (err) {
@@ -123,7 +127,7 @@ const exChangeOutGoods = async(ctx, next) => {
             goods_id: query.goodsId,
             goods_num: query.goodsNum,
             game_account: query.game_account,
-            orderid: util.generateOrderNo(),
+            orderId: util.generateOrderNo(),
             state: 0
         })
         return Promise.resolve(true)
