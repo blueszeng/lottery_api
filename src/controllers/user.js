@@ -196,10 +196,15 @@ const decomposeGoods = async(ctx, next) => {
 
 }
 
-
+// 1. 获得XXX 物品1件
+// 1. 赠送给XXXX 物品1件
+// 2.
+// 3. 分解XXX 物品 1 件 获得（ 兑换币 | 美元） 100.
+// 4. 
 /**
  * 获取用户记录数据
  */
+//  1.赠送 ，2 兑换  3 分解，， 4.掉落， 5.充值。
 const recordData = async(ctx, next) => {
     //  1.掉落，2 赠送， 3，分解， 4.兑换， 5.充值。
     let { query } = ctx.request
@@ -223,7 +228,7 @@ const recordData = async(ctx, next) => {
         let count = 0
         let where = {}
         switch (query.type) {
-            case 1:
+            case 2:
                 where = { uid: userId }
                 count = await models.WinPrizePush.count({
                     where
@@ -245,7 +250,7 @@ const recordData = async(ctx, next) => {
                     records[recordId].setDataValue('Good', undefined)
                 }
                 break
-            case 2:
+            case 4:
                 where = { send_uid: userId }
                 count = await models.GiveGoods.count({
                     where
@@ -308,7 +313,7 @@ const recordData = async(ctx, next) => {
                     records[recordId].setDataValue('Good', undefined)
                 }
                 break
-            case 4:
+            case 1:
                 where = { uid: userId }
                 count = await models.ExchangeGoods.count({
                     where

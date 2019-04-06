@@ -144,7 +144,7 @@ router.get('/decomposeGoods', user.decomposeGoods) // 分解物品
  *    parameters:
  *      - in: "query"
  *        name: "type"
- *        description: 记录类型(1.掉落，2 赠送， 3，分解， 4.兑换， 5.充值)
+ *        description: 记录类型(1.赠送, 2 兑换  3 分解, 4.掉落, 5.充值。)
  *        required: true
  *        type: "integer"
  *      - in: "query"
