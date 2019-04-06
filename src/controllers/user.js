@@ -71,6 +71,7 @@ const giveGoods = async(ctx, next) => {
             recv_uid: query.recvUid,
             goods_id: query.goodsId,
             goods_num: query.goodsNum,
+            orderid: util.generateOrderNo(),
         })
         return Promise.resolve(true)
     } catch (err) {
