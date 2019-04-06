@@ -196,6 +196,42 @@ const decomposeGoods = async(ctx, next) => {
 
 }
 
+
+const getGoodsInfo = async(ctx, next) => {
+    let { query } = ctx.request
+    const validateSchema = Joi.object().keys({
+        goodsId: Joi.number().min(1).label('物品ID'),
+    })
+    try {
+        query = await validate(query, validateSchema)
+    } catch (err) {
+        log(err.message)
+        return Promise.reject(err.message)
+    }
+    let goodsNum = await models.UserGoods.count({
+        where: { goods_id: query.goodsId }
+    })
+
+    let goods = await models.Goods.findById(query.goodsId)
+    let payExchangeRate = await models.Config.findOne({
+        attributes: ['value'],
+        where: {
+            key: 'payExchangeRate'
+        }
+    })
+    let rate = parseFloat(payExchangeRate.value)
+    let decomposeDollarPrice = goods.sell_price
+    let decomposeExchangePrice = goods.sell_price * rate
+    return Promise.resolve({
+        goodsNum,
+        decomposeDollarPrice,
+        decomposeExchangePrice,
+    })
+}
+
+/**
+ * 获取用户物品列表
+ */
 const getGoodsList = async(ctx, next) => {
     let { query } = ctx.request
     const validateSchema = Joi.object().keys({
@@ -417,5 +453,6 @@ export default {
     exChangeOutGoods,
     decomposeGoods,
     getGoodsList,
-    recordData
+    recordData,
+    getGoodsInfo
 }

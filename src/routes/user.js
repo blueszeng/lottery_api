@@ -187,6 +187,32 @@ router.get('/records', user.recordData) // 获取用户记录数据
 router.get('/goodsList', user.getGoodsList) // 获取用户物品列表
 
 
+
+/**
+ * @swagger
+ * /api/user/goodsInfo:
+ *  get:
+ *    tags:
+ *      - user
+ *    description: 获取用户物品信息
+ *    produces:
+ *      -"application/json"
+ *    parameters:
+ *      - in: "query"
+ *        name: "goodsId"
+ *        description: 物品id
+ *        type: "integer"
+ *    responses:
+ *      200:
+ *          description: 返回成功
+ *      510:
+ *          description: 服务器异常
+ *      412:
+ *          description: 参数校验错误
+ */
+router.get('/goodsInfo', user.getGoodsInfo) // 获取用户物品信息
+
+
 /**
  * @swagger
  * /api/user/getPayInfo:

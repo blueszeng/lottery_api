@@ -32,6 +32,7 @@ const allowPassPathAndMethod = (path, method) => {
         { path: '/api/user/giveGoods', method: 'GET' },
         { path: '/api/user/exChangeOutGoods', method: 'GET' },
         { path: '/api/user/goodsList', method: 'GET' },
+        { path: '/api/user/goodsInfo', method: 'GET' },
         { path: '/api/user/decomposeGoods', method: 'GET' },
         { path: '/api/user/records', method: 'GET' },
         { path: '/api/user/getPayInfo', method: 'GET' },
