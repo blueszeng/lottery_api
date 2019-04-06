@@ -212,7 +212,10 @@ const getGoodsInfo = async(ctx, next) => {
         where: { goods_id: query.goodsId }
     })
 
+
     let goods = await models.Goods.findById(query.goodsId)
+
+    attributes: ['id', 'img', 'name', 'skin_name', 'discrable']
     let payExchangeRate = await models.Config.findOne({
         attributes: ['value'],
         where: {
@@ -223,9 +226,13 @@ const getGoodsInfo = async(ctx, next) => {
     let decomposeDollarPrice = goods.sell_price
     let decomposeExchangePrice = goods.sell_price * rate
     return Promise.resolve({
-        goodsNum,
-        decomposeDollarPrice,
-        decomposeExchangePrice,
+        goods_num: goodsNum,
+        img: goods.img,
+        name: goods.img,
+        skin_name: goods.img,
+        discrable: goods.img,
+        decompose_dollar_price: decomposeDollarPrice,
+        decompose_exchange_price: decomposeExchangePrice,
     })
 }
 
