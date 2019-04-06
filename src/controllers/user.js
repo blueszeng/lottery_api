@@ -226,6 +226,7 @@ const getGoodsInfo = async(ctx, next) => {
     let decomposeDollarPrice = goods.sell_price
     let decomposeExchangePrice = goods.sell_price * rate
     return Promise.resolve({
+        goods_id: goods.id,
         goods_num: goodsNum,
         img: goods.img,
         name: goods.name,
