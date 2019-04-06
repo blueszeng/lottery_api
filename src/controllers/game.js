@@ -6,7 +6,7 @@ import _ from 'lodash'
  */
 const gameList = async(ctx, next) => {
     let game = await models.Game.findAll({
-        attributes: ['id', 'name', 'img'],
+        attributes: ['id', 'name', 'img', 'config'],
         where: { show: true }
     })
     return Promise.resolve(game)
