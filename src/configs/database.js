@@ -3,7 +3,7 @@ var database = {
         username: process.env.DATABASE_USERNAME_DEV || 'root',
         password: process.env.DATABASE_PASSWORD_DEV || 'my-secret-pw',
         database: process.env.DATABASE_NAME_DEV || 'lottery',
-        host: process.env.DATABASE_HOST_DEV || '127.0.0.1',
+        host: process.env.DATABASE_HOST_DEV || '47.107.155.245',
         dialect: 'mysql',
         dialectOptions: {
             charset: 'utf8mb4'
@@ -27,7 +27,7 @@ var database = {
         username: process.env.DATABASE_USERNAME_PRO || 'root',
         password: process.env.DATABASE_PASSWORD_PRO || 'my-secret-pw',
         database: process.env.DATABASE_NAME_PRO || 'lottery',
-        host: process.env.DATABASE_HOST_PRO || '127.0.0.1',
+        host: process.env.DATABASE_HOST_PRO || '47.107.155.245',
         dialect: 'mysql',
         dialectOptions: {
             charset: 'utf8mb4'

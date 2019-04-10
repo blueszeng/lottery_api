@@ -167,15 +167,26 @@ const decomposeGoods = async(ctx, next) => {
         }
 
         let goods = await models.Goods.findOne({
-            attributes: ['sell_price', 'decompose_dollar_py', 'decompose_exchange_py', 'skin_name'],
+            attributes: ['sell_price', 'skin_name'],
             where: { id: query.goodsId }
         })
+
+        let payExchangeRate = await models.Config.findOne({
+            attributes: ['value'],
+            where: {
+                key: 'payExchangeRate'
+            }
+        })
+        let rate = parseFloat(payExchangeRate.value)
+        let decomposeDollarPrice = goods.sell_price
+        let decomposeExchangePrice = goods.sell_price * rate
         let earnMoney = 0
+
         if (query.type === 1) { // 美元兑换
-            earnMoney = goods.decompose_dollar_py * goods.sell_price * query.goodsNum
+            earnMoney = decomposeDollarPrice * query.goodsNum
             user.increment('dollar_money', { by: earnMoney })
         } else { // 兑换币兑换
-            earnMoney = goods.decompose_exchange_py * goods.sell_price * query.goodsNum
+            earnMoney = decomposeExchangePrice * query.goodsNum
             user.increment('exchange_money', { by: earnMoney })
         }
         await user.save()
