@@ -335,6 +335,7 @@ const recordData = async(ctx, next) => {
                     offset,
                     limit,
                     where,
+                    order: ['created_at', 'DESC'],
                     include: [{
                         model: models.Goods,
                         attributes: ['id', 'name']
@@ -357,6 +358,7 @@ const recordData = async(ctx, next) => {
                     limit,
                     attributes: ['created_at', 'goods_num', 'recv_uid'],
                     where,
+                    order: ['created_at', 'DESC'],
                     include: [{
                         model: models.Goods,
                         attributes: ['id', 'name']
@@ -397,6 +399,7 @@ const recordData = async(ctx, next) => {
                     attributes: ['created_at', 'money_type', 'money'],
                     where,
                     offset,
+                    order: ['created_at', 'DESC'],
                     limit,
                     include: [{
                         model: models.Goods,
@@ -420,6 +423,7 @@ const recordData = async(ctx, next) => {
                     offset,
                     limit,
                     where,
+                    order: ['created_at', 'DESC'],
                     include: [{
                         model: models.Goods,
                         attributes: ['id', 'name']
@@ -439,7 +443,7 @@ const recordData = async(ctx, next) => {
                         id: {
                             [Op.in]: gameIds
                         }
-                    }
+                    },
                 })
                 let gameIdNameMap = {}
                 games.forEach((element) => {
@@ -459,6 +463,7 @@ const recordData = async(ctx, next) => {
                     attributes: ['sdcustomno', 'pay_type', 'money', 'dollar_money', 'state', 'created_at'],
                     offset,
                     limit,
+                    order: ['created_at', 'DESC'],
                     where
                 })
         }
