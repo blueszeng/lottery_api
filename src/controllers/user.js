@@ -127,7 +127,7 @@ const exChangeOutGoods = async(ctx, next) => {
             goods_id: query.goodsId,
             goods_num: query.goodsNum,
             game_account: query.game_account,
-            orderId: util.generateOrderNo(),
+            orderid: util.generateOrderNo(),
             state: 0
         })
         return Promise.resolve(true)
